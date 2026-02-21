@@ -1,3 +1,3 @@
 # PortfolioV2
 
-To access, go to https://.jerrypadilla.vercel.app
+To access, go to https://jerrypadilla.vercel.app
