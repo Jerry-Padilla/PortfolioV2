@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Jerry Padilla Jr.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <style>
+    /* Lightbox */
+    .lightbox { position:fixed; inset:0; background:rgba(8,10,15,0.95); z-index:200; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.3s; }
+    .lightbox.open { opacity:1; pointer-events:all; }
+    .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px; }
+    .lightbox-close { position:absolute; top:1.5rem; right:2rem; font-family:var(--font-mono); font-size:1.5rem; color:var(--text-muted); cursor:pointer; transition:color 0.2s; }
+    .lightbox-close:hover { color:var(--accent); }
+    .lightbox-caption { position:absolute; bottom:2rem; font-family:var(--font-mono); font-size:0.72rem; color:var(--text-muted); letter-spacing:0.1em; }
+    .upload-note { background:var(--surface); border:1px dashed var(--border-hover); border-radius:var(--radius); padding:2rem; text-align:center; margin-bottom:2rem; }
+    .upload-note p { font-family:var(--font-mono); font-size:0.78rem; color:var(--text-dim); line-height:1.7; }
+    .upload-note span { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">JPJ<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About</a></li>
+      <li><a href="projects.html" class="mobile-link">Projects</a></li>
+      <li><a href="resume.html" class="mobile-link">Resume</a></li>
+      <li><a href="gallery.html" class="mobile-link active">Gallery</a></li>
+      <li><a href="tools.html" class="mobile-link">Tools</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img src="" alt="" id="lightboxImg" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <div class="page">
+    <div class="page-hero">
+      <div class="hero-bg-grid page-hero-bg"></div>
+      <div class="page-hero-glow"></div>
+      <div class="container page-hero-content">
+        <div class="page-label reveal">Photo Gallery</div>
+        <h1 class="page-title reveal">Gallery</h1>
+        <p class="page-sub reveal">Engineering in action — from lab work and shop floors to showcases and research.</p>
+      </div>
+    </div>
+
+    <div class="gallery-body">
+      <div class="container">
+
+        <div class="upload-note reveal">
+          <p>
+            📁 To add your photos, place image files in the same folder as this site and update the <span>src</span> attributes below.<br />
+            Supported formats: <span>.jpg · .png · .webp</span> — Click any card to enlarge.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item tall reveal" data-caption="Jabil — Industry Showcase Presentation">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">🏭</div>
+              <span>Jabil Industry Showcase</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">Jabil — Industry Showcase</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="D-Tek Manufacturing — Shop Floor">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">⚙️</div>
+              <span>D-Tek Shop Floor</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">D-Tek — Shop Floor</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="SJSU Biomedical Research Conference">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">🦾</div>
+              <span>Exoskeleton Research</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">SJSU Biomedical Conference</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="Cellares — Data Dashboard">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">📊</div>
+              <span>Cellares Dashboard</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">Cellares — Analytics Dashboard</span></div>
+          </div>
+
+          <div class="gallery-item tall reveal" data-caption="Stanford — Self Driving Vehicles Lab">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">🚗</div>
+              <span>Stanford Self-Driving Lab</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">Stanford — SDV Research</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="SJSU Graduation — May 2025">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">🎓</div>
+              <span>SJSU Graduation 2025</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">SJSU — May 2025</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="CAD & SOLIDWORKS Design Work">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">📐</div>
+              <span>SOLIDWORKS CAD</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">CAD Design Work</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="AbbVie — Pipeline Development">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">🧬</div>
+              <span>AbbVie Data Pipeline</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">AbbVie — Biotech Pipeline</span></div>
+          </div>
+
+          <div class="gallery-item reveal" data-caption="iSono Health — Medical UI">
+            <div class="gallery-placeholder">
+              <div class="ph-icon">🩺</div>
+              <span>iSono Medical UI</span>
+            </div>
+            <div class="gallery-overlay"><span class="gallery-caption">iSono Health — Medical Device UI</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2025 Gerardo "Jerry" Padilla Jr.</span>
+        <span>Mountain View, CA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const caption = item.dataset.caption || '';
+        if (img) {
+          lightboxImg.src = img.src;
+          lightboxImg.style.display = 'block';
+        } else {
+          lightboxImg.style.display = 'none';
+        }
+        lightboxCaption.textContent = caption;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Jerry Padilla Jr.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">JPJ<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About</a></li>
+      <li><a href="projects.html" class="mobile-link">Projects</a></li>
+      <li><a href="resume.html" class="mobile-link">Resume</a></li>
+      <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+      <li><a href="tools.html" class="mobile-link">Tools</a></li>
+      <li><a href="contact.html" class="mobile-link active">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="page">
+    <div class="page-hero">
+      <div class="hero-bg-grid page-hero-bg"></div>
+      <div class="page-hero-glow"></div>
+      <div class="container page-hero-content">
+        <div class="page-label reveal">Get In Touch</div>
+        <h1 class="page-title reveal">Contact</h1>
+        <p class="page-sub reveal">Open to full-time roles, freelance projects, and conversations about interesting engineering problems.</p>
+      </div>
+    </div>
+
+    <div class="contact-body">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-left reveal">
+            <h2>Let's build<br />something<br /><em>together.</em></h2>
+            <p>
+              Whether it's a manufacturing challenge, a data pipeline, an ML project, 
+              or just a conversation — I'm always open to connecting with people 
+              working on interesting problems.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:gerardo.padilla.work@gmail.com" class="c-link">
+                gerardo.padilla.work@gmail.com
+                <span>Email ↗</span>
+              </a>
+              <a href="https://linkedin.com/in/jerrypad" target="_blank" class="c-link">
+                linkedin.com/in/jerrypad
+                <span>LinkedIn ↗</span>
+              </a>
+              <a href="https://github.com/Jerry-Padilla" target="_blank" class="c-link">
+                github.com/Jerry-Padilla
+                <span>GitHub ↗</span>
+              </a>
+              <div class="c-link" style="cursor:default;">
+                Mountain View, CA
+                <span>📍 Location</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Send Message →</button>
+            <div class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2025 Gerardo "Jerry" Padilla Jr.</span>
+        <span>Mountain View, CA</span>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

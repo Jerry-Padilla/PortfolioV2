@@ -1,336 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerry Padilla Jr. — Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jerry Padilla Jr. — Engineer & Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
 
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo">JPJ<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-  <!-- Nav -->
-  <nav id="navbar">
-    <div class="nav-logo">JPJ<span class="accent">.</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#projects" class="mobile-link">Projects</a></li>
-      <li><a href="#resume" class="mobile-link">Resume</a></li>
-      <li><a href="#contact" class="mobile-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-noise"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow reveal">
-        <span class="mono">[ Available for opportunities ]</span>
-      </div>
-      <h1 class="hero-name reveal">
-        <span class="name-line">Jerry</span>
-        <span class="name-line">Padilla<span class="accent">.</span></span>
-        <span class="name-suffix mono">Jr</span>
-      </h1>
-      <div class="hero-roles reveal">
-        <span class="role-tag">Manufacturing Engineer</span>
-        <span class="divider">/</span>
-        <span class="role-tag">Quality Engineer</span>
-        <span class="divider">/</span>
-        <span class="role-tag">Software Developer</span>
-      </div>
-      <p class="hero-sub reveal">
-        Bridging the gap between the shop floor and the digital world — 
-        engineering precision in hardware, software, and everything between.
-      </p>
-      <div class="hero-cta reveal">
-        <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="#contact" class="btn-ghost">Get In Touch</a>
-      </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html" class="mobile-link">Home</a></li>
+        <li><a href="about.html" class="mobile-link">About</a></li>
+        <li><a href="projects.html" class="mobile-link">Projects</a></li>
+        <li><a href="resume.html" class="mobile-link">Resume</a></li>
+        <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+        <li><a href="tools.html" class="mobile-link">Tools</a></li>
+        <li><a href="contact.html" class="mobile-link">Contact</a></li>
+      </ul>
     </div>
-    <div class="hero-scroll-indicator">
-      <span class="mono">scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="section-label reveal"><span class="mono">01 /</span> About Me</div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <h2>The intersection of<br /><em>process & code.</em></h2>
-          <p>
-            I'm Jerry — a multi-discipline engineer with experience spanning manufacturing 
-            processes, quality systems, and software development. I thrive where physical 
-            engineering meets digital solutions, building tools and systems that make 
-            production faster, smarter, and more reliable.
-          </p>
-          <p>
-            Whether it's analyzing defect data, optimizing a production line, or 
-            writing software to automate the whole thing — I bring the same 
-            precision and problem-solving mindset to every challenge.
-          </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number">5<span class="accent">+</span></span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">30<span class="accent">+</span></span>
-              <span class="stat-label">Projects Completed</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">3<span class="accent">×</span></span>
-              <span class="stat-label">Engineering Domains</span>
-            </div>
-          </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-noise"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">
+          <span class="mono">[ Biomedical × Software × Manufacturing ]</span>
         </div>
-        <div class="about-skills reveal">
-          <div class="skills-block">
-            <h4 class="mono">Manufacturing</h4>
-            <div class="skill-tags">
-              <span>Lean Manufacturing</span>
-              <span>Six Sigma</span>
-              <span>GD&T</span>
-              <span>CAD / CAM</span>
-              <span>CNC Machining</span>
-              <span>Process Optimization</span>
-            </div>
+        <h1 class="hero-name reveal">
+          <span class="name-line">Jerry</span>
+          <span class="name-line">Padilla<span class="accent"> Jr.</span></span>
+          <span class="name-suffix"></span>
+        </h1>
+        <div class="hero-roles reveal">
+          <span class="role-tag">Manufacturing Engineer</span>
+          <span class="divider">/</span>
+          <span class="role-tag">Quality & Data Integrity</span>
+          <span class="divider">/</span>
+          <span class="role-tag">Software Developer</span>
+        </div>
+        <p class="hero-sub reveal">
+          SJSU Biomedical Engineering grad bridging the gap between shop floors
+          and digital systems — building pipelines, dashboards, and tools that
+          make engineering smarter.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="projects.html" class="btn-primary">View My Work</a>
+          <a href="contact.html" class="btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span class="mono">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="home-stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-num">6<span>+</span></div>
+            <div class="stat-desc">Internships & Roles</div>
           </div>
-          <div class="skills-block">
-            <h4 class="mono">Quality</h4>
-            <div class="skill-tags">
-              <span>ISO 9001</span>
-              <span>FMEA</span>
-              <span>SPC</span>
-              <span>Root Cause Analysis</span>
-              <span>PPAP / APQP</span>
-              <span>Inspection & Metrology</span>
-            </div>
+          <div class="stat-item reveal">
+            <div class="stat-num">90<span>%</span></div>
+            <div class="stat-desc">Defect Reduction @ D-Tek</div>
           </div>
-          <div class="skills-block">
-            <h4 class="mono">Software</h4>
-            <div class="skill-tags">
-              <span>Python</span>
-              <span>JavaScript</span>
-              <span>SQL</span>
-              <span>Data Analysis</span>
-              <span>Process Automation</span>
-              <span>Dashboard Development</span>
-            </div>
+          <div class="stat-item reveal">
+            <div class="stat-num">3<span>×</span></div>
+            <div class="stat-desc">Engineering Domains</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-num">2<span>+</span></div>
+            <div class="stat-desc">Languages Spoken</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <div class="section-label reveal"><span class="mono">02 /</span> Projects</div>
-      <h2 class="section-title reveal">Selected Work</h2>
-      <div class="projects-grid">
-
-        <div class="project-card reveal" data-index="01">
-          <div class="project-header">
-            <span class="project-num mono">01</span>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Quality</span>
-            </div>
-          </div>
-          <h3>Defect Tracking Dashboard</h3>
-          <p>Built an internal web dashboard to visualize real-time defect data from production lines, reducing reporting time by 70% and enabling faster corrective actions.</p>
-          <div class="project-footer">
-            <span class="mono dim">Python · Pandas · Plotly</span>
-            <a href="#" class="project-link">View →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-index="02">
-          <div class="project-header">
-            <span class="project-num mono">02</span>
-            <div class="project-tags">
-              <span class="tag">Automation</span>
-              <span class="tag">Manufacturing</span>
-            </div>
-          </div>
-          <h3>Process Automation Script</h3>
-          <p>Developed scripts to automate repetitive quality inspection reports, saving the team 10+ hours per week and significantly reducing human error in documentation.</p>
-          <div class="project-footer">
-            <span class="mono dim">Python · Excel API · SQL</span>
-            <a href="#" class="project-link">View →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-index="03">
-          <div class="project-header">
-            <span class="project-num mono">03</span>
-            <div class="project-tags">
-              <span class="tag">Lean</span>
-              <span class="tag">Six Sigma</span>
-            </div>
-          </div>
-          <h3>Production Line Optimization</h3>
-          <p>Led a Kaizen event that restructured a manufacturing cell layout, improving throughput by 25% and reducing WIP inventory by nearly half.</p>
-          <div class="project-footer">
-            <span class="mono dim">Lean · VSM · Time Study</span>
-            <a href="#" class="project-link">View →</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-index="04">
-          <div class="project-header">
-            <span class="project-num mono">04</span>
-            <div class="project-tags">
-              <span class="tag">Web</span>
-              <span class="tag">Software</span>
-            </div>
-          </div>
-          <h3>Engineering Portfolio Site</h3>
-          <p>Designed and built this portfolio site from scratch — custom HTML, CSS, and JavaScript with no frameworks. Deployed on Vercel with a focus on performance and design.</p>
-          <div class="project-footer">
-            <span class="mono dim">HTML · CSS · JS</span>
-            <a href="#" class="project-link">View →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Resume -->
-  <section class="resume" id="resume">
-    <div class="container">
-      <div class="section-label reveal"><span class="mono">03 /</span> Resume</div>
-      <div class="resume-header reveal">
-        <h2 class="section-title">Experience</h2>
-        <a href="resume.pdf" class="btn-ghost" download>Download PDF ↓</a>
-      </div>
-
-      <div class="timeline">
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="mono dim">2022 — Present</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Quality Engineer <span class="at">@ Company Name</span></h3>
-            <p>Led quality assurance initiatives across multiple production lines. Managed PPAP documentation, conducted root cause analysis on customer complaints, and drove corrective action programs.</p>
-            <div class="timeline-tags">
-              <span>ISO 9001</span><span>FMEA</span><span>PPAP</span><span>SPC</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="mono dim">2020 — 2022</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Manufacturing Engineer <span class="at">@ Company Name</span></h3>
-            <p>Designed and optimized manufacturing processes for high-volume production. Collaborated with design teams on DFM reviews and led several Lean improvement projects.</p>
-            <div class="timeline-tags">
-              <span>Lean</span><span>GD&T</span><span>CAD</span><span>Process Design</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">
-            <span class="mono dim">2018 — 2020</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Manufacturing Technician <span class="at">@ Company Name</span></h3>
-            <p>Operated and maintained CNC equipment, supported process engineers in troubleshooting, and contributed to ongoing quality improvement efforts on the shop floor.</p>
-            <div class="timeline-tags">
-              <span>CNC</span><span>Inspection</span><span>5S</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="education reveal">
-        <h3 class="mono">Education</h3>
-        <div class="edu-item">
-          <span class="edu-degree">B.S. Industrial / Manufacturing Engineering</span>
-          <span class="mono dim">University Name · Year</span>
+    <!-- Featured -->
+    <section class="home-featured">
+      <div class="container">
+        <div class="section-label reveal">Quick Nav</div>
+        <div class="featured-grid">
+          <a href="projects.html" class="feat-card reveal">
+            <div class="feat-icon">⚙️</div>
+            <h3>Projects</h3>
+            <p>
+              ML models, data pipelines, dashboards, and manufacturing
+              automation tools across 6 companies.
+            </p>
+            <span class="feat-link">View Projects →</span>
+          </a>
+          <a href="resume.html" class="feat-card reveal">
+            <div class="feat-icon">📋</div>
+            <h3>Resume</h3>
+            <p>
+              Full work history spanning Stanford, Jabil, Cellares, AbbVie,
+              SJSU, iSono Health, and D-Tek.
+            </p>
+            <span class="feat-link">View Resume →</span>
+          </a>
+          <a href="tools.html" class="feat-card reveal">
+            <div class="feat-icon">🛠</div>
+            <h3>Tools & Stack</h3>
+            <p>
+              Python, SQL, ML frameworks, CAD, signal processing, and everything
+              in between.
+            </p>
+            <span class="feat-link">View Tools →</span>
+          </a>
+          <a href="gallery.html" class="feat-card reveal">
+            <div class="feat-icon">📸</div>
+            <h3>Gallery</h3>
+            <p>Photos from projects, lab work, and engineering in action.</p>
+            <span class="feat-link">View Gallery →</span>
+          </a>
+          <a href="about.html" class="feat-card reveal">
+            <div class="feat-icon">👤</div>
+            <h3>About Me</h3>
+            <p>
+              Bilingual engineer who thrives at the intersection of hardware,
+              data, and code.
+            </p>
+            <span class="feat-link">Learn More →</span>
+          </a>
+          <a href="contact.html" class="feat-card reveal">
+            <div class="feat-icon">✉️</div>
+            <h3>Contact</h3>
+            <p>
+              Open to full-time roles, collaborations, and conversations about
+              cool engineering problems.
+            </p>
+            <span class="feat-link">Say Hello →</span>
+          </a>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-label reveal"><span class="mono">04 /</span> Contact</div>
-      <div class="contact-grid">
-        <div class="contact-left reveal">
-          <h2>Let's build<br />something<br /><em>together.</em></h2>
-          <p>Whether it's an engineering challenge, a software project, or just a conversation — I'm always open to connecting.</p>
-          <div class="contact-links">
-            <a href="mailto:jerry@example.com" class="contact-link">jerry@example.com</a>
-            <a href="https://linkedin.com/in/jerrypadillajr" target="_blank" class="contact-link">LinkedIn ↗</a>
-            <a href="https://github.com/jerrypadillajr" target="_blank" class="contact-link">GitHub ↗</a>
-          </div>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <span>© 2025 Gerardo "Jerry" Padilla Jr.</span>
+          <span>Mountain View, CA</span>
         </div>
-        <form class="contact-form reveal" id="contactForm">
-          <div class="form-group">
-            <label class="mono" for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label class="mono" for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label class="mono" for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width">Send Message →</button>
-          <div class="form-success" id="formSuccess">
-            <span class="mono accent">✓ Message sent! I'll get back to you soon.</span>
-          </div>
-        </form>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="mono dim">© 2025 Jerry Padilla Jr.</span>
-        <span class="mono dim">Built with precision.</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
