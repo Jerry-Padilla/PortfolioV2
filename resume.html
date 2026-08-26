@@ -18,7 +18,7 @@
       <li><a href="tools.html">Tools</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
@@ -39,7 +39,7 @@
       <div class="container page-hero-content">
         <div class="page-label reveal">Work History</div>
         <h1 class="page-title reveal">Resume</h1>
-        <p class="page-sub reveal">6 roles across biomedical, manufacturing, and software — from Stanford to the shop floor.</p>
+        <p class="page-sub reveal">Professional experience across manufacturing, data engineering, software, and biomedical systems.</p>
       </div>
     </div>
 
@@ -49,7 +49,7 @@
           <div>
             <div class="section-label">Experience</div>
           </div>
-          <a href="Gerardo_Padilla_-_Resume_1_15_26.pdf" download class="btn-ghost">Download PDF ↓</a>
+          <button type="button" class="btn-ghost" id="printResume">Print / Save as PDF</button>
         </div>
 
         <div class="timeline">
@@ -60,8 +60,8 @@
               <div class="company">Santa Clara, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Manufacturing Engineer <span class="at">— Quality & Data Integrity</span></h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">D-Tek Manufacturing</p>
+              <h3 class="experience-company">D-Tek Manufacturing</h3>
+              <div class="experience-role">Manufacturing Engineer · Quality & Data Integrity</div>
               <ul>
                 <li>Drive data collection & integrity initiatives to improve traceability across all production pipelines</li>
                 <li>Built and deployed end-to-end traceability workflows, standardized recordkeeping, and enforced required checkpoints</li>
@@ -80,8 +80,9 @@
               <div class="company">South San Francisco, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Data Engineering Intern <span class="at">— Software Analytics</span></h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">Cellares — Cell Therapy Manufacturing Technologies</p>
+              <h3 class="experience-company">Cellares</h3>
+              <div class="experience-role">Data Engineering Intern · Software Analytics</div>
+              <p class="experience-context">Cell therapy manufacturing technology</p>
               <ul>
                 <li>Collaborated with stakeholders to design, build, and validate production-level data tables and metrics for CAR T-cell manufacturing</li>
                 <li>Worked within the gold-layer of the data pipeline to ensure high data quality and consistent metrics</li>
@@ -100,15 +101,17 @@
               <div class="company">San Jose, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Software Engineering Intern <span class="at">— Wearable Exoskeleton</span></h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">San Jose State University — Dept. of Mechanical Engineering</p>
+              <h3 class="experience-company">San Jose State University</h3>
+              <div class="experience-role">Software Engineering Intern</div>
+              <p class="experience-context">Department of Mechanical Engineering · Wearable exoskeleton research</p>
               <ul>
-                <li>Leveraged a prosthetic exoskeleton for gait disability research; presented at local Biomedical Research Conference</li>
-                <li>Developed a Python-based data collection pipeline with logging for 20+ sensor channels and patient data management</li>
-                <li>Designed a 3-step EMG signal processing pipeline using Butterworth filtering, full-wave rectification, and RMS envelope smoothing</li>
+                <li>Developed a Windows-compatible Python application for robotic hip-exoskeleton experiments and gait-research data collection</li>
+                <li>Integrated serial-port discovery, device connection, patient and treadmill configuration, recording duration, and automatic CSV output into one workflow</li>
+                <li>Captured joint angles, torque, speed, voltage, current, accelerometer, gyroscope, battery, and controller-state measurements from the device</li>
+                <li>Supported live multi-channel visualization with PyQtGraph and offline trajectory analysis with NumPy, SciPy, pandas, and Matplotlib</li>
               </ul>
               <div class="timeline-tags">
-                <span>Python</span><span>EMG</span><span>Signal Processing</span><span>Biomedical</span>
+                <span>Python</span><span>PySerial</span><span>PyQtGraph</span><span>SciPy</span><span>Data Acquisition</span>
               </div>
             </div>
           </div>
@@ -119,8 +122,9 @@
               <div class="company">San Jose, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Software Engineering Intern <span class="at">— Jabil Scholars Program</span></h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">Jabil — Tech Industrial Manufacturing</p>
+              <h3 class="experience-company">Jabil</h3>
+              <div class="experience-role">Software Engineering Intern · Jabil Scholars Program</div>
+              <p class="experience-context">Automated optical inspection for PCBA manufacturing</p>
               <ul>
                 <li>Led student engineer team to develop ML-based support for PCBA Automated Optical Inspection</li>
                 <li>Trained and evaluated classification and detection models on polarity defects using Ultralytics YOLO</li>
@@ -139,8 +143,8 @@
               <div class="company">South San Francisco, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Software Engineering Intern <span class="at">— Business Technology Solutions</span></h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">AbbVie</p>
+              <h3 class="experience-company">AbbVie</h3>
+              <div class="experience-role">Software Engineering Intern · Business Technology Solutions</div>
               <ul>
                 <li>Created and deployed automation and optimization for the data processing pipeline, saving significant man-hours</li>
                 <li>Collaborated with scientists to expand pipeline capabilities around research needs and ease of use</li>
@@ -158,8 +162,8 @@
               <div class="company">South San Francisco, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Software Engineering Intern</h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">iSono Health</p>
+              <h3 class="experience-company">iSono Health</h3>
+              <div class="experience-role">Software Engineering Intern</div>
               <ul>
                 <li>Built and tested a user interface for medical scanning equipment using JavaScript, Playwright, and TypeScript</li>
                 <li>Collaborated with mentors to create interfaces matching designer plans and visual designs</li>
@@ -177,8 +181,8 @@
               <div class="company">Palo Alto, CA</div>
             </div>
             <div class="timeline-content">
-              <h3>Software Engineering Intern <span class="at">— Self-Driving Vehicles</span></h3>
-              <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);margin-bottom:0.75rem;">Stanford University</p>
+              <h3 class="experience-company">Stanford University</h3>
+              <div class="experience-role">Software Engineering Intern · Self-Driving Vehicles Program</div>
               <ul>
                 <li>Created an application to simulate radar data and determine accurate distances for moving objects in adverse conditions</li>
                 <li>Recreated a Kalman filtering algorithm to optimize radar readings and generate a visual output</li>

@@ -75,16 +75,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
   if (form && successMsg) {
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending...'; btn.disabled = true;
-      await new Promise(r => setTimeout(r, 1200));
-      form.reset();
+
+      const data = new FormData(form);
+      const senderName = String(data.get('name') || '').trim();
+      const senderEmail = String(data.get('email') || '').trim();
+      const subject = String(data.get('subject') || '').trim();
+      const message = String(data.get('message') || '').trim();
+      const emailBody = [
+        `Name: ${senderName}`,
+        `Reply-to: ${senderEmail}`,
+        '',
+        message,
+      ].join('\n');
+      const mailto = `mailto:gerardo.padilla.work@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
       successMsg.classList.add('show');
-      btn.textContent = 'Send Message →'; btn.disabled = false;
-      setTimeout(() => successMsg.classList.remove('show'), 5000);
+      window.location.href = mailto;
     });
+  }
+
+  const printResume = document.getElementById('printResume');
+  if (printResume) {
+    printResume.addEventListener('click', () => window.print());
   }
 
   /* ── Hero Parallax ── */
