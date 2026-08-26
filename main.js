@@ -7,30 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Enable enhanced motion only after JavaScript is available. */
   document.body.classList.add('reveal-enabled');
 
-  /* ── Custom Cursor ── */
-  const cursor = document.getElementById('cursor');
-  const follower = document.getElementById('cursorFollower');
-  if (cursor && follower && window.matchMedia('(pointer: fine)').matches) {
-    let mx = 0, my = 0, fx = 0, fy = 0;
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      cursor.style.left = mx + 'px';
-      cursor.style.top = my + 'px';
-    });
-    (function animate() {
-      fx += (mx - fx) * 0.12; fy += (my - fy) * 0.12;
-      follower.style.left = fx + 'px'; follower.style.top = fy + 'px';
-      requestAnimationFrame(animate);
-    })();
-    document.querySelectorAll('a, button, .project-card, .tool-card, .gallery-item').forEach(el => {
-      el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2.5)'; follower.style.opacity = '0'; });
-      el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; follower.style.opacity = '1'; });
-    });
-  } else {
-    if (cursor) cursor.style.display = 'none';
-    if (follower) follower.style.display = 'none';
-  }
-
   /* ── Sticky Nav ── */
   const navbar = document.getElementById('navbar');
   if (navbar) {
