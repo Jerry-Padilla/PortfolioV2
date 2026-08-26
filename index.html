@@ -1,247 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jerry Padilla Jr. — Engineer & Developer</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav id="navbar">
-      <a href="index.html" class="nav-logo">JPJ<span class="accent">.</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="tools.html">Tools</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerardo Padilla Jr. — Software, Data &amp; Manufacturing Engineer</title>
+  <meta name="description" content="Gerardo Padilla Jr. is a software, data, and manufacturing engineer building data pipelines, automation systems, machine-learning applications, manufacturing software, and engineering tools." />
+  <meta property="og:title" content="Gerardo Padilla Jr. — Software, Data &amp; Manufacturing Engineer" />
+  <meta property="og:description" content="Engineering projects across software, data systems, manufacturing, machine learning, automation, and physical systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jerryp.vercel.app/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://jerryp.vercel.app/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="navbar" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo" aria-label="Gerardo Padilla home">GP<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="resume.html">Resume</a></li><li><a href="tools.html">Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu"><ul>
+    <li><a href="index.html" class="mobile-link">Home</a></li><li><a href="projects.html" class="mobile-link">Projects</a></li><li><a href="resume.html" class="mobile-link">Resume</a></li><li><a href="tools.html" class="mobile-link">Tools</a></li><li><a href="about.html" class="mobile-link">About</a></li><li><a href="contact.html" class="mobile-link">Contact</a></li>
+  </ul></div>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="index.html" class="mobile-link">Home</a></li>
-        <li><a href="about.html" class="mobile-link">About</a></li>
-        <li><a href="projects.html" class="mobile-link">Projects</a></li>
-        <li><a href="resume.html" class="mobile-link">Resume</a></li>
-        <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
-        <li><a href="tools.html" class="mobile-link">Tools</a></li>
-        <li><a href="contact.html" class="mobile-link">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Hero -->
+  <main>
     <section class="hero">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-noise"></div>
-      <div class="hero-glow"></div>
+      <div class="hero-bg-grid"></div><div class="hero-noise"></div><div class="hero-glow"></div>
       <div class="hero-content">
-        <div class="hero-eyebrow reveal">
-          <span class="mono">[ Data Engineering × Software × Manufacturing ]</span>
-        </div>
-        <h1 class="hero-name reveal">
-          <span class="name-line">Jerry</span>
-          <span class="name-line">Padilla<span class="accent"> Jr.</span></span>
-          <span class="name-suffix"></span>
-        </h1>
-        <div class="hero-roles reveal">
-          <span class="role-tag">Manufacturing Engineer</span>
-          <span class="divider">/</span>
-          <span class="role-tag">Quality & Data Integrity</span>
-          <span class="divider">/</span>
-          <span class="role-tag">Software Developer</span>
-        </div>
-        <p class="hero-sub reveal">
-          Engineer building resilient data pipelines, interactive simulations,
-          and production tools at the intersection of physical systems and software.
-        </p>
+        <div class="hero-eyebrow reveal"><span class="mono">DATA · SOFTWARE · MANUFACTURING SYSTEMS</span></div>
+        <h1 class="hero-name reveal"><span class="name-line">Gerardo</span><span class="name-line">Padilla<span class="accent"> Jr.</span></span></h1>
+        <p class="hero-role reveal">Software · Data · Manufacturing Engineer</p>
+        <p class="hero-sub reveal">Engineer building resilient data pipelines, interactive simulations, and production tools at the intersection of physical systems and software.</p>
         <div class="hero-cta reveal">
           <a href="projects.html" class="btn-primary">View My Work</a>
+          <a href="https://github.com/Jerry-Padilla" target="_blank" rel="noopener noreferrer" class="btn-ghost">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
           <a href="contact.html" class="btn-ghost">Get In Touch</a>
         </div>
       </div>
-      <div class="hero-scroll">
-        <span class="mono">scroll</span>
-        <div class="scroll-line"></div>
-      </div>
+      <div class="hero-scroll"><span class="mono">scroll</span><div class="scroll-line"></div></div>
     </section>
 
-    <!-- Stats -->
-    <div class="home-stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item reveal">
-            <div class="stat-num">3<span>+</span></div>
-            <div class="stat-desc">Years of Experience</div>
-          </div>
-          <div class="stat-item reveal">
-            <div class="stat-num">10</div>
-            <div class="stat-desc">Selected Projects</div>
-          </div>
-          <div class="stat-item reveal">
-            <div class="stat-num">2025</div>
-            <div class="stat-desc">SJSU Graduate</div>
-          </div>
-        </div>
+    <section class="home-stats" aria-label="Selected engineering outcomes"><div class="container"><div class="stats-grid">
+      <div class="stat-item reveal"><div class="stat-num">90<span>%</span></div><div class="stat-desc">AOI Verification Reduction</div></div>
+      <div class="stat-item reveal"><div class="stat-num">30<span>%</span></div><div class="stat-desc">On-Time Delivery Improvement</div></div>
+      <div class="stat-item reveal"><div class="stat-num">10</div><div class="stat-desc">Selected Engineering Projects</div></div>
+    </div></div></section>
+
+    <section class="latest-work" id="latest-work"><div class="container">
+      <div class="latest-heading reveal"><div><div class="section-label">Featured Work</div><h2 class="section-title">Software and data for physical systems.</h2></div><a href="projects.html" class="latest-all">All projects <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+      <div class="latest-grid">
+        <a href="https://github.com/Jerry-Padilla/local-network-kafka-monitoring" target="_blank" rel="noopener noreferrer" class="latest-card reveal">
+          <div class="latest-kicker"><span class="latest-number">01 / DATA ENGINEERING</span><i data-lucide="network" aria-hidden="true"></i></div><h3>NetPulse</h3>
+          <p>Resilient network-observability pipeline with event streaming, event-time processing, replay-safe writes, and deterministic incident correlation.</p>
+          <div class="architecture-flow" aria-label="Architecture: Agent to Kafka to Spark to PostgreSQL to incidents">Agent <span>→</span> Kafka <span>→</span> Spark <span>→</span> PostgreSQL <span>→</span> Incidents</div>
+          <div class="latest-stack"><span>Python</span><span>Kafka</span><span>Spark</span><span>PostgreSQL</span><span>Docker</span></div><span class="latest-link">View repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="https://github.com/Jerry-Padilla/FactoryOS" target="_blank" rel="noopener noreferrer" class="latest-card reveal">
+          <div class="latest-kicker"><span class="latest-number">02 / SIMULATION</span><i data-lucide="factory" aria-hidden="true"></i></div><h3>FactoryOS</h3>
+          <p>Interactive 3D manufacturing simulation modeling production flow, equipment faults, repair workflows, telemetry, quality, and live OEE analytics.</p>
+          <div class="latest-stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>Zustand</span></div><span class="latest-link">View repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="https://github.com/BIOROB-Lab-192/robotic-hip-exoskeleton-data-collection-pipeline" target="_blank" rel="noopener noreferrer" class="latest-card reveal">
+          <div class="latest-kicker"><span class="latest-number">03 / INSTRUMENTATION</span><i data-lucide="activity" aria-hidden="true"></i></div><h3>Wearable Robotic Exoskeleton</h3>
+          <p>Python instrumentation and research workflow for patient/trial management, 20+ sensor channels, live visualization, and EMG signal processing.</p>
+          <div class="latest-stack"><span>Python</span><span>PySerial</span><span>PyQtGraph</span><span>SciPy</span></div><span class="latest-link">View repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+        </a>
       </div>
-    </div>
+    </div></section>
 
-    <!-- Latest Work -->
-    <section class="latest-work" id="latest-work">
-      <div class="container">
-        <div class="latest-heading reveal">
-          <div>
-            <div class="section-label">Latest Work / 2026</div>
-            <h2 class="section-title">Systems built for the real world.</h2>
-          </div>
-          <a href="projects.html" class="latest-all">All projects →</a>
-        </div>
-        <div class="latest-grid">
-          <a
-            href="https://github.com/Jerry-Padilla/local-network-kafka-monitoring"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="latest-card reveal"
-          >
-            <div class="latest-kicker">
-              <span class="latest-number">01 / DATA ENGINEERING</span>
-              <span class="latest-status">Latest</span>
-            </div>
-            <h3>NetPulse</h3>
-            <p>
-              A resilient home-network observability pipeline with two-agent
-              telemetry, incident correlation, replay-safe writes, and
-              event-time streaming.
-            </p>
-            <div class="latest-stack">
-              <span>Python</span><span>Kafka</span><span>Spark</span
-              ><span>PostgreSQL</span>
-            </div>
-            <span class="latest-link">View repository ↗</span>
-          </a>
+    <section class="home-featured"><div class="container"><div class="section-label reveal">Explore</div><div class="featured-grid">
+      <a href="projects.html" class="feat-card reveal"><i class="feat-icon" data-lucide="folder-git-2" aria-hidden="true"></i><h3>Projects</h3><p>Data pipelines, manufacturing simulations, ML evaluation systems, automation, and instrumentation.</p><span class="feat-link">View Projects <i data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+      <a href="resume.html" class="feat-card reveal"><i class="feat-icon" data-lucide="file-text" aria-hidden="true"></i><h3>Resume</h3><p>Experience across manufacturing engineering, data, software, testing, and biomedical systems.</p><span class="feat-link">View Resume <i data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+      <a href="tools.html" class="feat-card reveal"><i class="feat-icon" data-lucide="wrench" aria-hidden="true"></i><h3>Tools &amp; Technologies</h3><p>Python, SQL, Kafka, Spark, PostgreSQL, React, Power BI, manufacturing systems, and engineering tools.</p><span class="feat-link">View Tools <i data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+      <a href="about.html" class="feat-card reveal"><i class="feat-icon" data-lucide="user-round" aria-hidden="true"></i><h3>About</h3><p>The background behind my work across software, data, manufacturing, and physical engineering systems.</p><span class="feat-link">About Gerardo <i data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+      <a href="contact.html" class="feat-card reveal"><i class="feat-icon" data-lucide="mail" aria-hidden="true"></i><h3>Contact</h3><p>Open to software, data, manufacturing systems, automation, quality, and engineering opportunities.</p><span class="feat-link">Get In Touch <i data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+    </div></div></section>
+  </main>
 
-          <a
-            href="https://github.com/Jerry-Padilla/FactoryOS"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="latest-card reveal"
-          >
-            <div class="latest-kicker">
-              <span class="latest-number">02 / SIMULATION</span>
-              <span class="latest-status">New</span>
-            </div>
-            <h3>FactoryOS Simulation</h3>
-            <p>
-              An interactive 3D manufacturing cell with live telemetry, fault
-              diagnostics, quality inspection, and event-derived OEE analytics.
-            </p>
-            <div class="latest-stack">
-              <span>Next.js</span><span>TypeScript</span><span>Three.js</span
-              ><span>React</span>
-            </div>
-            <span class="latest-link">View repository ↗</span>
-          </a>
-
-          <a
-            href="https://github.com/BIOROB-Lab-192/robotic-hip-exoskeleton-data-collection-pipeline"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="latest-card reveal"
-          >
-            <div class="latest-kicker">
-              <span class="latest-number">03 / BIOMEDICAL</span>
-              <span class="latest-status">Featured</span>
-            </div>
-            <h3>Hip Exoskeleton Pipeline</h3>
-            <p>
-              A Windows-compatible control and data-collection application for
-              device communication, live visualization, logging, and offline
-              signal analysis.
-            </p>
-            <div class="latest-stack">
-              <span>Python</span><span>PySerial</span><span>PyQtGraph</span
-              ><span>SciPy</span>
-            </div>
-            <span class="latest-link">View repository ↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured -->
-    <section class="home-featured">
-      <div class="container">
-        <div class="section-label reveal">Explore</div>
-        <div class="featured-grid">
-          <a href="projects.html" class="feat-card reveal">
-            <div class="feat-icon">⚙️</div>
-            <h3>Projects</h3>
-            <p>
-              Data pipelines, interactive simulations, ML models, and
-              manufacturing systems spanning software and hardware.
-            </p>
-            <span class="feat-link">View Projects →</span>
-          </a>
-          <a href="resume.html" class="feat-card reveal">
-            <div class="feat-icon">📋</div>
-            <h3>Resume</h3>
-            <p>
-              Full work history spanning Stanford, Jabil, Cellares, AbbVie,
-              SJSU, iSono Health, and D-Tek.
-            </p>
-            <span class="feat-link">View Resume →</span>
-          </a>
-          <a href="tools.html" class="feat-card reveal">
-            <div class="feat-icon">🛠</div>
-            <h3>Tools & Stack</h3>
-            <p>
-              Python, SQL, ML frameworks, CAD, signal processing, and everything
-              in between.
-            </p>
-            <span class="feat-link">View Tools →</span>
-          </a>
-          <a href="gallery.html" class="feat-card reveal">
-            <div class="feat-icon">📸</div>
-            <h3>Gallery</h3>
-            <p>Photos from projects, lab work, and engineering in action.</p>
-            <span class="feat-link">View Gallery →</span>
-          </a>
-          <a href="about.html" class="feat-card reveal">
-            <div class="feat-icon">👤</div>
-            <h3>About Me</h3>
-            <p>
-              Bilingual engineer who thrives at the intersection of hardware,
-              data, and code.
-            </p>
-            <span class="feat-link">Learn More →</span>
-          </a>
-          <a href="contact.html" class="feat-card reveal">
-            <div class="feat-icon">✉️</div>
-            <h3>Contact</h3>
-            <p>
-              Open to full-time roles, collaborations, and conversations about
-              cool engineering problems.
-            </p>
-            <span class="feat-link">Say Hello →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-inner">
-          <span>© 2026 Gerardo "Jerry" Padilla Jr.</span>
-          <span>Mountain View, CA</span>
-        </div>
-      </div>
-    </footer>
-
-    <script src="main.js"></script>
-  </body>
+  <footer><div class="container"><div class="footer-inner"><span>© 2026 Gerardo “Jerry” Padilla Jr.</span><div class="footer-links"><a href="mailto:gerardo.padilla.work@gmail.com"><i data-lucide="mail" aria-hidden="true"></i>Email</a><a href="https://github.com/Jerry-Padilla" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i>GitHub</a><a href="https://linkedin.com/in/jerrypad" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i>LinkedIn</a></div><span>Mountain View, CA</span></div></div></footer>
+  <script src="https://unpkg.com/lucide@latest" defer></script><script src="main.js" defer></script>
+</body>
 </html>

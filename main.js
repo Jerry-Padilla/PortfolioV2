@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Enable enhanced motion only after JavaScript is available. */
   document.body.classList.add('reveal-enabled');
+  if (window.lucide) {
+    window.lucide.createIcons({ attrs: { 'stroke-width': 1.7 } });
+  }
 
   /* ── Sticky Nav ── */
   const navbar = document.getElementById('navbar');
@@ -21,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       open = !open;
       mobileMenu.classList.toggle('open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
       document.body.style.overflow = open ? 'hidden' : '';
       const spans = menuToggle.querySelectorAll('span');
       if (open) {
@@ -34,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.mobile-link').forEach(l => {
       l.addEventListener('click', () => {
         open = false; mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
         menuToggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
       });

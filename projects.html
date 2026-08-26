@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects — Jerry Padilla Jr.</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Engineering Projects | Gerardo Padilla Jr.</title>
+    <meta name="description" content="Selected software, data, manufacturing simulation, automation, machine learning, and biomedical engineering projects by Gerardo Padilla Jr." />
+    <meta property="og:title" content="Engineering Projects | Gerardo Padilla Jr." /><meta property="og:description" content="Ten selected projects spanning software, data, manufacturing systems, automation, and biomedical engineering." /><meta property="og:type" content="website" />
+    <link rel="canonical" href="https://jerryp.vercel.app/projects.html" /><link rel="icon" href="favicon.svg" type="image/svg+xml" /><link rel="stylesheet" href="style.css" />
     <style>
       .accordion {
         display: flex;
@@ -22,7 +24,7 @@
       }
       .accordion-item.is-latest .accordion-trigger {
         background:
-          linear-gradient(90deg, rgba(226, 207, 166, 0.1), transparent 55%),
+          linear-gradient(90deg, rgba(18, 18, 18, 0.055), transparent 55%),
           var(--surface);
       }
       .accordion-item:last-child {
@@ -189,33 +191,31 @@
   </head>
   <body>
     <nav id="navbar">
-      <a href="index.html" class="nav-logo">JPJ<span class="accent">.</span></a>
+      <a href="index.html" class="nav-logo" aria-label="Gerardo Padilla home">GP<span class="accent">.</span></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="tools.html">Tools</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
       <ul>
         <li><a href="index.html" class="mobile-link">Home</a></li>
-        <li><a href="about.html" class="mobile-link">About</a></li>
         <li><a href="projects.html" class="mobile-link active">Projects</a></li>
         <li><a href="resume.html" class="mobile-link">Resume</a></li>
-        <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
         <li><a href="tools.html" class="mobile-link">Tools</a></li>
+        <li><a href="about.html" class="mobile-link">About</a></li>
         <li><a href="contact.html" class="mobile-link">Contact</a></li>
       </ul>
     </div>
 
-    <div class="page">
+    <main class="page">
       <div class="page-hero">
         <div class="hero-bg-grid page-hero-bg"></div>
         <div class="page-hero-glow"></div>
@@ -223,8 +223,8 @@
           <div class="page-label reveal">Latest + Selected Work</div>
           <h1 class="page-title reveal">Projects</h1>
           <p class="page-sub reveal">
-            Recent software builds and selected engineering work across data,
-            manufacturing simulation, ML, and biomedical systems.
+            Ten selected builds across data engineering, manufacturing simulation,
+            automation, machine learning, production systems, and biomedical instrumentation.
           </p>
         </div>
       </div>
@@ -284,12 +284,12 @@
               <div class="accordion-body">
                 <div class="accordion-inner">
                   <div class="acc-description">
-                    Created an interactive 3D factory simulation/game that lets
-                    players explore a manufacturing cell, run production, diagnose
-                    faults, and watch operational decisions affect live KPIs.
+                    Built a professional interactive 3D manufacturing simulation for
+                    exploring a production cell, running jobs, diagnosing faults, and
+                    seeing how operational decisions change live manufacturing KPIs.
                     <ul>
                       <li>Simulates traceable workpieces across CNCs, a conveyor, robot transfer, CMM inspection, and reject handling</li>
-                      <li>Includes equipment controls, five fault scenarios, guided repair workflows, and live telemetry</li>
+                      <li>Includes equipment controls, five fault scenarios, guided troubleshooting workflows, and live telemetry</li>
                       <li>Calculates OEE, throughput, scrap, utilization, quality, and cycle time from simulation events</li>
                     </ul>
                   </div>
@@ -335,15 +335,14 @@
                     Inspection of printed circuit board assemblies.
                     <ul>
                       <li>
-                        Trained and evaluated YOLO-based classification and
-                        detection models on polarity defects
+                        Trained and evaluated YOLO classification and detection models on polarity defects, comparing precision, recall, and confidence thresholds
                       </li>
                       <li>
                         Achieved up to
                         <span class="acc-highlight">90% reduction</span> in
-                        defect verification and inspection time
+                        manual AOI verification time
                       </li>
-                      <li>Presented findings at Jabil's Industry Showcase</li>
+                      <li>Documented DOE results, model failure modes, and a repeatable SOP; presented findings at Jabil's Industry Showcase</li>
                     </ul>
                   </div>
                   <div class="acc-meta">
@@ -354,7 +353,7 @@
                         ><span>YOLO</span><span>PyTorch</span>
                       </div>
                     </div>
-                    <a href="#" class="acc-link disabled">Private Repo</a>
+                    <span class="acc-link disabled">Private project</span>
                   </div>
                 </div>
               </div>
@@ -393,8 +392,7 @@
                         quality and consistent metrics
                       </li>
                       <li>
-                        Deployed an interactive dashboard to visualize
-                        statistical measurements in real time
+                        Used Databricks and SQL for transformations and Grafana for an interactive real-time manufacturing dashboard
                       </li>
                       <li>
                         Laid the foundation for future machine learning and
@@ -406,11 +404,10 @@
                     <div>
                       <div class="acc-stack-label">Stack</div>
                       <div class="acc-stack-chips">
-                        <span>SQL</span><span>Medallion Arch.</span
-                        ><span>Pandas</span><span>Dashboards</span>
+                        <span>SQL</span><span>Databricks</span><span>Grafana</span><span>Medallion Arch.</span>
                       </div>
                     </div>
-                    <a href="#" class="acc-link disabled">Private Repo</a>
+                    <span class="acc-link disabled">Private project</span>
                   </div>
                 </div>
               </div>
@@ -420,7 +417,7 @@
               <button class="accordion-trigger" aria-expanded="false">
                 <span class="acc-num">05</span>
                 <span class="acc-title"
-                  >Robotic Hip Exoskeleton Data Pipeline</span
+                  >Wearable Robotic Exoskeleton — Software &amp; Instrumentation</span
                 >
                 <div class="acc-tags">
                   <span class="tag">Signal Processing</span
@@ -440,19 +437,18 @@
               <div class="accordion-body">
                 <div class="accordion-inner">
                   <div class="acc-description">
-                    Built a Python application for real-time communication,
+                    From September 2024 through May 2025, built a Python application for real-time communication,
                     control, visualization, and experimental data collection
                     from a robotic hip exoskeleton.
                     <ul>
                       <li>
-                        Automated CSV logging for joint state, torque, voltage,
-                        current, accelerometer, and gyroscope measurements
+                        Acquired and validated 20+ channels spanning joint state, actuator, inertial, and experimental sensors with structured CSV logging
                       </li>
                       <li>
                         Built device detection, patient/test configuration, and
                         live multi-channel visualization workflows
                       </li>
-                      <li>Added offline sine fitting and signal-analysis tools for recorded experiments</li>
+                      <li>Implemented EMG processing with Butterworth filtering, full-wave rectification, RMS envelope smoothing, plus offline signal analysis</li>
                     </ul>
                   </div>
                   <div class="acc-meta">
@@ -473,7 +469,7 @@
               <button class="accordion-trigger" aria-expanded="false">
                 <span class="acc-num">06</span>
                 <span class="acc-title"
-                  >Traceability & Data Integrity System — D-Tek</span
+                  >Manufacturing Systems &amp; Traceability — D-Tek</span
                 >
                 <div class="acc-tags">
                   <span class="tag">Manufacturing</span
@@ -493,21 +489,16 @@
               <div class="accordion-body">
                 <div class="accordion-inner">
                   <div class="acc-description">
-                    Built and deployed end-to-end traceability workflows for a
-                    high-precision CNC machining shop serving critical
-                    industries.
+                    Supported quality, data integrity, automation, and manufacturing systems for a high-precision CNC machining operation from August 2025 through August 2026.
                     <ul>
                       <li>
-                        Standardized production recordkeeping and material
-                        traceability across shopfloor workflows
+                        Built Python automation and Power BI reporting around MES and ERP/MRP production, quality, and operational data
                       </li>
                       <li>
-                        Added consistent inspection checkpoints and clearer
-                        handoffs between production and quality
+                        Improved traceability, inspection planning, controlled documentation, and data integrity across shop-floor workflows
                       </li>
                       <li>
-                        Investigated process bottlenecks and preventable holds
-                        using ERP and quality-system data
+                        Supported NPI/NPD readiness, root-cause investigations, equipment troubleshooting, and production optimization; reduced quality misses by about 50% and improved on-time delivery by about 30%
                       </li>
                     </ul>
                   </div>
@@ -515,11 +506,10 @@
                     <div>
                       <div class="acc-stack-label">Stack</div>
                       <div class="acc-stack-chips">
-                        <span>ERP Systems</span><span>Quality Systems</span
-                        ><span>Process Design</span>
+                        <span>Python</span><span>Power BI</span><span>MES</span><span>ERP/MRP</span><span>NPI/NPD</span>
                       </div>
                     </div>
-                    <a href="#" class="acc-link disabled">Internal Project</a>
+                    <span class="acc-link disabled">Internal work</span>
                   </div>
                 </div>
               </div>
@@ -549,16 +539,15 @@
               <div class="accordion-body">
                 <div class="accordion-inner">
                   <div class="acc-description">
-                    Created automation and optimization tooling for a biotech
-                    research data pipeline at AbbVie.
+                    Created automation and performance tooling for a biotech research-data pipeline handling 15 GB+ datasets and millions of measurement points at AbbVie.
                     <ul>
                       <li>
-                        Saved significant man-hours through pipeline automation
+                        Introduced multithreaded processing and workflow improvements, reducing supported processing time by approximately 99%
                       </li>
                       <li>
                         Developed testing and verification for
                         <span class="acc-highlight"
-                          >gigabyte-scale datasets</span
+                          >15 GB+ datasets</span
                         >
                       </li>
                       <li>
@@ -571,11 +560,10 @@
                     <div>
                       <div class="acc-stack-label">Stack</div>
                       <div class="acc-stack-chips">
-                        <span>Python</span><span>Automation</span
-                        ><span>Data Engineering</span><span>Testing</span>
+                        <span>Python</span><span>Multithreading</span><span>Data Engineering</span><span>Testing</span>
                       </div>
                     </div>
-                    <a href="#" class="acc-link disabled">Private Repo</a>
+                    <span class="acc-link disabled">Private project</span>
                   </div>
                 </div>
               </div>
@@ -689,7 +677,7 @@
                         ><span>Playwright</span><span>ML Annotation</span>
                       </div>
                     </div>
-                    <a href="#" class="acc-link disabled">Private Repo</a>
+                    <span class="acc-link disabled">Private project</span>
                   </div>
                 </div>
               </div>
@@ -720,8 +708,7 @@
                     no frameworks, pure HTML/CSS/JS.
                     <ul>
                       <li>
-                        Custom cursor, scroll reveal animations, accordion
-                        project cards
+                        Accessible navigation, scroll reveal animations, and accordion project details
                       </li>
                       <li>Fully responsive with mobile menu</li>
                       <li>Deployed on Vercel</li>
@@ -736,7 +723,7 @@
                       </div>
                     </div>
                     <a
-                      href="https://github.com/Jerry-Padilla"
+                      href="https://github.com/Jerry-Padilla/PortfolioV2"
                       target="_blank"
                       class="acc-link"
                       >GitHub →</a
@@ -748,18 +735,18 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <footer>
       <div class="container">
         <div class="footer-inner">
-          <span>© 2026 Gerardo "Jerry" Padilla Jr.</span>
-          <span>Mountain View, CA</span>
+          <span>© 2026 Gerardo “Jerry” Padilla Jr.</span>
+          <div class="footer-links"><a href="mailto:gerardo.padilla.work@gmail.com"><i data-lucide="mail" aria-hidden="true"></i>Email</a><a href="https://github.com/Jerry-Padilla" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i>GitHub</a><a href="https://linkedin.com/in/jerrypad" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i>LinkedIn</a></div><span>Mountain View, CA</span>
         </div>
       </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script><script src="main.js" defer></script>
     <script>
       document.querySelectorAll(".accordion-trigger").forEach((trigger) => {
         trigger.addEventListener("click", () => {
