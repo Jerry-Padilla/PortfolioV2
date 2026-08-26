@@ -23,6 +23,14 @@
       .accordion-item {
         border-bottom: 1px solid var(--border);
       }
+      .accordion-item.is-latest .acc-num {
+        color: var(--accent-bright);
+      }
+      .accordion-item.is-latest .accordion-trigger {
+        background:
+          linear-gradient(90deg, rgba(226, 207, 166, 0.1), transparent 55%),
+          var(--surface);
+      }
       .accordion-item:last-child {
         border-bottom: none;
       }
@@ -200,7 +208,7 @@
         <li><a href="tools.html">Tools</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="menu-toggle" id="menuToggle">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -221,11 +229,11 @@
         <div class="hero-bg-grid page-hero-bg"></div>
         <div class="page-hero-glow"></div>
         <div class="container page-hero-content">
-          <div class="page-label reveal">Selected Work</div>
+          <div class="page-label reveal">Latest + Selected Work</div>
           <h1 class="page-title reveal">Projects</h1>
           <p class="page-sub reveal">
-            Click any project to expand — ML, data pipelines, signal processing,
-            manufacturing automation, and more.
+            Recent software builds and selected engineering work across data,
+            manufacturing simulation, ML, and biomedical systems.
           </p>
         </div>
       </div>
@@ -233,9 +241,83 @@
       <div class="projects-body">
         <div class="container">
           <div class="accordion reveal">
+            <div class="accordion-item is-latest open">
+              <button class="accordion-trigger" aria-expanded="true">
+                <span class="acc-num">01</span>
+                <span class="acc-title">NetPulse — Network Reliability Observatory</span>
+                <div class="acc-tags">
+                  <span class="tag">Latest</span><span class="tag">Data Engineering</span>
+                </div>
+                <span class="acc-chevron"
+                  ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-inner">
+                  <div class="acc-description">
+                    Built a production-inspired observability system that compares
+                    wired and Wi-Fi agents to classify local network, router, ISP,
+                    DNS, and external-service symptoms.
+                    <ul>
+                      <li>Designed a Dockerized Kafka KRaft and PostgreSQL ingestion pipeline with versioned contracts and dead-letter routing</li>
+                      <li>Implemented replay-safe writes, a durable SQLite agent outbox, and acknowledgement-gated delivery</li>
+                      <li>Added Spark event-time windows, deterministic incident correlation, CI, and automated verification</li>
+                    </ul>
+                  </div>
+                  <div class="acc-meta">
+                    <div>
+                      <div class="acc-stack-label">Stack</div>
+                      <div class="acc-stack-chips">
+                        <span>Python</span><span>Kafka</span><span>Spark</span><span>PostgreSQL</span><span>Docker</span>
+                      </div>
+                    </div>
+                    <a href="https://github.com/Jerry-Padilla/local-network-kafka-monitoring" target="_blank" rel="noopener noreferrer" class="acc-link">Repository →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item is-latest">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span class="acc-num">02</span>
+                <span class="acc-title">FactoryOS — Interactive Manufacturing Simulation</span>
+                <div class="acc-tags">
+                  <span class="tag">New</span><span class="tag">Simulation</span>
+                </div>
+                <span class="acc-chevron"
+                  ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-inner">
+                  <div class="acc-description">
+                    Created an interactive 3D factory simulation/game that lets
+                    players explore a manufacturing cell, run production, diagnose
+                    faults, and watch operational decisions affect live KPIs.
+                    <ul>
+                      <li>Simulates traceable workpieces across CNCs, a conveyor, robot transfer, CMM inspection, and reject handling</li>
+                      <li>Includes equipment controls, five fault scenarios, guided repair workflows, and live telemetry</li>
+                      <li>Calculates OEE, throughput, scrap, utilization, quality, and cycle time from simulation events</li>
+                    </ul>
+                  </div>
+                  <div class="acc-meta">
+                    <div>
+                      <div class="acc-stack-label">Stack</div>
+                      <div class="acc-stack-chips">
+                        <span>Next.js</span><span>TypeScript</span><span>React</span><span>Three.js</span><span>Zustand</span>
+                      </div>
+                    </div>
+                    <a href="https://github.com/Jerry-Padilla/FactoryOS" target="_blank" rel="noopener noreferrer" class="acc-link">Repository →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">01</span>
+                <span class="acc-num">03</span>
                 <span class="acc-title"
                   >PCBA Optical Inspection — ML Defect Classifier</span
                 >
@@ -289,7 +371,7 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">02</span>
+                <span class="acc-num">04</span>
                 <span class="acc-title"
                   >CAR T-Cell Manufacturing Metrics Dashboard</span
                 >
@@ -345,9 +427,9 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">03</span>
+                <span class="acc-num">05</span>
                 <span class="acc-title"
-                  >Exoskeleton EMG Data Pipeline — SJSU Research</span
+                  >Robotic Hip Exoskeleton Data Pipeline</span
                 >
                 <div class="acc-tags">
                   <span class="tag">Signal Processing</span
@@ -367,31 +449,30 @@
               <div class="accordion-body">
                 <div class="accordion-inner">
                   <div class="acc-description">
-                    Built a Python-based data collection and signal processing
-                    pipeline for a prosthetic exoskeleton used in gait
-                    disability research.
+                    Built a Python application for real-time communication,
+                    control, visualization, and experimental data collection
+                    from a robotic hip exoskeleton.
                     <ul>
                       <li>
-                        Data logging for
-                        <span class="acc-highlight">20+ sensor channels</span>
-                        with patient data management
+                        Automated CSV logging for joint state, torque, voltage,
+                        current, accelerometer, and gyroscope measurements
                       </li>
                       <li>
-                        3-step EMG pipeline: Butterworth filtering → full-wave
-                        rectification → RMS envelope smoothing
+                        Built device detection, patient/test configuration, and
+                        live multi-channel visualization workflows
                       </li>
-                      <li>Presented at local Biomedical Research Conference</li>
+                      <li>Added offline sine fitting and signal-analysis tools for recorded experiments</li>
                     </ul>
                   </div>
                   <div class="acc-meta">
                     <div>
                       <div class="acc-stack-label">Stack</div>
                       <div class="acc-stack-chips">
-                        <span>Python</span><span>EMG</span
-                        ><span>Butterworth</span><span>MATLAB</span>
+                        <span>Python</span><span>PySerial</span
+                        ><span>PyQtGraph</span><span>SciPy</span>
                       </div>
                     </div>
-                    <a href="#" class="acc-link disabled">Private Repo</a>
+                    <a href="https://github.com/BIOROB-Lab-192/robotic-hip-exoskeleton-data-collection-pipeline" target="_blank" rel="noopener noreferrer" class="acc-link">Repository →</a>
                   </div>
                 </div>
               </div>
@@ -399,7 +480,7 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">04</span>
+                <span class="acc-num">06</span>
                 <span class="acc-title"
                   >Traceability & Data Integrity System — D-Tek</span
                 >
@@ -455,7 +536,7 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">05</span>
+                <span class="acc-num">07</span>
                 <span class="acc-title"
                   >Research Data Pipeline Automation — AbbVie</span
                 >
@@ -511,7 +592,7 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">06</span>
+                <span class="acc-num">08</span>
                 <span class="acc-title"
                   >Radar Simulation & Kalman Filter — Stanford</span
                 >
@@ -570,7 +651,7 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">07</span>
+                <span class="acc-num">09</span>
                 <span class="acc-title"
                   >Medical Scanner UI & Tumor Annotation — iSono Health</span
                 >
@@ -625,7 +706,7 @@
 
             <div class="accordion-item">
               <button class="accordion-trigger" aria-expanded="false">
-                <span class="acc-num">08</span>
+                <span class="acc-num">10</span>
                 <span class="acc-title">This Portfolio Website</span>
                 <div class="acc-tags">
                   <span class="tag">Web</span><span class="tag">Design</span>
@@ -681,7 +762,7 @@
     <footer>
       <div class="container">
         <div class="footer-inner">
-          <span>© 2025 Gerardo "Jerry" Padilla Jr.</span>
+          <span>© 2026 Gerardo "Jerry" Padilla Jr.</span>
           <span>Mountain View, CA</span>
         </div>
       </div>

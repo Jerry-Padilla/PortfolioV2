@@ -4,6 +4,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* Enable enhanced motion only after JavaScript is available. */
+  document.body.classList.add('reveal-enabled');
+
   /* ── Custom Cursor ── */
   const cursor = document.getElementById('cursor');
   const follower = document.getElementById('cursorFollower');
@@ -63,6 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Scroll Reveal ── */
   const reveals = document.querySelectorAll('.reveal');
+  document.querySelectorAll('.hero .reveal, .page-hero .reveal').forEach(el => {
+    el.classList.add('visible');
+  });
   const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
