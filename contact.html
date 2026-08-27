@@ -19,14 +19,20 @@
         <a href="https://github.com/Jerry-Padilla" target="_blank" rel="noopener noreferrer" class="c-link">github.com/Jerry-Padilla <span><i data-lucide="github" aria-hidden="true"></i>GitHub</span></a>
         <div class="c-link contact-location">Mountain View, CA <span><i data-lucide="map-pin" aria-hidden="true"></i>Location</span></div>
       </div></div>
-      <form class="contact-form reveal" id="contactForm" action="mailto:gerardo.padilla.work@gmail.com" method="post" enctype="text/plain">
-        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required /></div>
-        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required /></div>
-        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Role, project, or conversation" required /></div>
-        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Share the opportunity, timeline, and best way to follow up." required></textarea></div>
-        <button type="submit" class="btn-primary full-width">Open email draft <i data-lucide="send" aria-hidden="true"></i></button><p class="form-note">Your email app will open with the recipient, subject, and message filled in. Review the draft and press Send to deliver it.</p><div class="form-success" id="formSuccess" role="status">Email draft opened. Press Send in your email app to deliver it.</div>
+      <form class="contact-form reveal" id="contactForm" action="mailto:gerardo.padilla.work@gmail.com" method="post" enctype="text/plain" novalidate>
+        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" minlength="2" aria-describedby="nameError" required /><span class="field-error" id="nameError" aria-live="polite"></span></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="your@email.com" aria-describedby="emailError" required /><span class="field-error" id="emailError" aria-live="polite"></span></div>
+        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Role, project, or conversation" minlength="3" aria-describedby="subjectError" required /><span class="field-error" id="subjectError" aria-live="polite"></span></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" minlength="10" placeholder="Share the opportunity, timeline, and best way to follow up." aria-describedby="messageError" required></textarea><span class="field-error" id="messageError" aria-live="polite"></span></div>
+        <button type="submit" class="btn-primary full-width">Continue to email <i data-lucide="send" aria-hidden="true"></i></button><p class="form-note">After validation, choose your email app, Gmail, or Outlook. Your message will be filled in and ready for you to send.</p><div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
       </form>
     </div></div></section>
+    <dialog class="email-dialog" id="emailDialog" aria-labelledby="emailDialogTitle">
+      <button type="button" class="dialog-close" id="closeEmailDialog" aria-label="Close email options"><i data-lucide="x" aria-hidden="true"></i></button>
+      <div class="dialog-icon"><i data-lucide="mail-check" aria-hidden="true"></i></div><div class="section-label">Message ready</div><h2 id="emailDialogTitle">Choose how to send it.</h2><p>Your recipient, subject, contact details, and message are already filled in.</p>
+      <div class="email-options"><a id="emailAppLink" class="btn-primary" href="mailto:gerardo.padilla.work@gmail.com"><i data-lucide="mail" aria-hidden="true"></i>Email app</a><a id="gmailLink" class="btn-ghost" href="https://mail.google.com" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link" aria-hidden="true"></i>Gmail</a><a id="outlookLink" class="btn-ghost" href="https://outlook.office.com/mail/" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link" aria-hidden="true"></i>Outlook</a></div>
+      <p class="dialog-fallback">If nothing opens, email <a href="mailto:gerardo.padilla.work@gmail.com">gerardo.padilla.work@gmail.com</a> directly.</p>
+    </dialog>
   </main>
   <footer><div class="container"><div class="footer-inner"><span>© 2026 Gerardo “Jerry” Padilla Jr.</span><div class="footer-links"><a href="mailto:gerardo.padilla.work@gmail.com"><i data-lucide="mail" aria-hidden="true"></i>Email</a><a href="https://github.com/Jerry-Padilla" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i>GitHub</a><a href="https://linkedin.com/in/jerrypad" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i>LinkedIn</a></div><span>Mountain View, CA</span></div></div></footer>
   <script src="https://unpkg.com/lucide@latest" defer></script><script src="main.js" defer></script>

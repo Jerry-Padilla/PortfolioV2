@@ -43,11 +43,19 @@
       <div class="hero-scroll"><span class="mono">scroll</span><div class="scroll-line"></div></div>
     </section>
 
-    <section class="home-stats" aria-label="Selected engineering outcomes"><div class="container"><div class="stats-grid">
-      <div class="stat-item reveal"><div class="stat-num">90<span>%</span></div><div class="stat-desc">AOI Verification Reduction</div></div>
-      <div class="stat-item reveal"><div class="stat-num">30<span>%</span></div><div class="stat-desc">On-Time Delivery Improvement</div></div>
-      <div class="stat-item reveal"><div class="stat-num">10</div><div class="stat-desc">Selected Engineering Projects</div></div>
-    </div></div></section>
+    <section class="factory-demo" aria-labelledby="factory-demo-title">
+      <div class="container">
+        <div class="factory-demo-heading reveal">
+          <div><div class="section-label">Interactive Simulation</div><h2 class="section-title" id="factory-demo-title">FactoryOS, running live.</h2><p>Explore the production floor directly from the portfolio. Start the system, follow workpieces through the cell, and inspect live equipment behavior.</p></div>
+          <a href="https://factoryos-three.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-ghost">Open full simulation <i data-lucide="maximize-2" aria-hidden="true"></i></a>
+        </div>
+        <div class="factory-demo-window reveal">
+          <div class="factory-window-bar"><div class="window-controls" aria-hidden="true"><span></span><span></span><span></span></div><span class="window-title">FactoryOS / Live Manufacturing Floor</span><a href="https://factoryos-three.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open FactoryOS in a new tab"><i data-lucide="external-link" aria-hidden="true"></i></a></div>
+          <iframe src="https://factoryos-three.vercel.app" title="Interactive FactoryOS manufacturing simulation" loading="eager" allow="fullscreen; autoplay; clipboard-read; clipboard-write" allowfullscreen></iframe>
+        </div>
+        <p class="factory-demo-note">Interactive 3D content may take a moment to initialize. Use the full simulation for keyboard exploration controls.</p>
+      </div>
+    </section>
 
     <section class="latest-work" id="latest-work"><div class="container">
       <div class="latest-heading reveal"><div><div class="section-label">Featured Work</div><h2 class="section-title">Software and data for physical systems.</h2></div><a href="projects.html" class="latest-all">All projects <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
@@ -58,10 +66,10 @@
           <div class="architecture-flow" aria-label="Architecture: Agent to Kafka to Spark to PostgreSQL to incidents">Agent <span>→</span> Kafka <span>→</span> Spark <span>→</span> PostgreSQL <span>→</span> Incidents</div>
           <div class="latest-stack"><span>Python</span><span>Kafka</span><span>Spark</span><span>PostgreSQL</span><span>Docker</span></div><span class="latest-link">View repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
         </a>
-        <a href="https://github.com/Jerry-Padilla/FactoryOS" target="_blank" rel="noopener noreferrer" class="latest-card reveal">
+        <a href="https://factoryos-three.vercel.app" target="_blank" rel="noopener noreferrer" class="latest-card reveal">
           <div class="latest-kicker"><span class="latest-number">02 / SIMULATION</span><i data-lucide="factory" aria-hidden="true"></i></div><h3>FactoryOS</h3>
           <p>Interactive 3D manufacturing simulation modeling production flow, equipment faults, repair workflows, telemetry, quality, and live OEE analytics.</p>
-          <div class="latest-stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>Zustand</span></div><span class="latest-link">View repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+          <div class="latest-stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>Zustand</span></div><span class="latest-link">Open simulation <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
         </a>
         <a href="https://github.com/BIOROB-Lab-192/robotic-hip-exoskeleton-data-collection-pipeline" target="_blank" rel="noopener noreferrer" class="latest-card reveal">
           <div class="latest-kicker"><span class="latest-number">03 / INSTRUMENTATION</span><i data-lucide="activity" aria-hidden="true"></i></div><h3>Wearable Robotic Exoskeleton</h3>

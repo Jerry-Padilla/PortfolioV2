@@ -78,10 +78,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Contact Form ── */
   const form = document.getElementById('contactForm');
-  const successMsg = document.getElementById('formSuccess');
-  if (form && successMsg) {
+  const emailDialog = document.getElementById('emailDialog');
+  if (form && emailDialog) {
+    const fields = {
+      name: {
+        input: form.elements.name,
+        error: document.getElementById('nameError'),
+        message: 'Enter your name (at least 2 characters).',
+        valid: value => value.length >= 2,
+      },
+      email: {
+        input: form.elements.email,
+        error: document.getElementById('emailError'),
+        message: 'Enter a complete email address, such as name@example.com.',
+        valid: value => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value),
+      },
+      subject: {
+        input: form.elements.subject,
+        error: document.getElementById('subjectError'),
+        message: 'Add a subject (at least 3 characters).',
+        valid: value => value.length >= 3,
+      },
+      message: {
+        input: form.elements.message,
+        error: document.getElementById('messageError'),
+        message: 'Add a little more detail (at least 10 characters).',
+        valid: value => value.length >= 10,
+      },
+    };
+
+    const validateField = (field) => {
+      const value = field.input.value.trim();
+      const valid = field.valid(value);
+      field.input.setAttribute('aria-invalid', String(!valid));
+      field.input.classList.toggle('input-error', !valid);
+      field.error.textContent = valid ? '' : field.message;
+      return valid;
+    };
+
+    Object.values(fields).forEach(field => {
+      field.input.addEventListener('blur', () => validateField(field));
+      field.input.addEventListener('input', () => {
+        if (field.input.getAttribute('aria-invalid') === 'true') validateField(field);
+      });
+    });
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const fieldList = Object.values(fields);
+      const validationResults = fieldList.map(field => validateField(field));
+      const invalidField = fieldList[validationResults.indexOf(false)];
+      if (invalidField) {
+        document.getElementById('formStatus').textContent = 'Please correct the highlighted fields.';
+        invalidField.input.focus();
+        return;
+      }
 
       const data = new FormData(form);
       const senderName = String(data.get('name') || '').trim();
@@ -95,9 +147,24 @@ document.addEventListener('DOMContentLoaded', () => {
         message,
       ].join('\n');
       const mailto = `mailto:gerardo.padilla.work@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=gerardo.padilla.work@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      const outlook = `https://outlook.office.com/mail/deeplink/compose?to=gerardo.padilla.work@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
-      successMsg.classList.add('show');
-      window.location.href = mailto;
+      document.getElementById('emailAppLink').href = mailto;
+      document.getElementById('gmailLink').href = gmail;
+      document.getElementById('outlookLink').href = outlook;
+      document.getElementById('formStatus').textContent = 'Message validated. Choose an email option to finish sending.';
+      if (typeof emailDialog.showModal === 'function') emailDialog.showModal();
+      else emailDialog.setAttribute('open', '');
+    });
+
+    const closeEmailDialog = () => {
+      if (typeof emailDialog.close === 'function') emailDialog.close();
+      else emailDialog.removeAttribute('open');
+    };
+    document.getElementById('closeEmailDialog').addEventListener('click', closeEmailDialog);
+    emailDialog.addEventListener('click', (event) => {
+      if (event.target === emailDialog) closeEmailDialog();
     });
   }
 
