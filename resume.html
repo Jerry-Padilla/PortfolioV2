@@ -5,9 +5,9 @@
   <title>Resume — Gerardo Padilla Jr.</title>
   <meta name="description" content="Professional experience and education for Gerardo Padilla Jr., a software, data, and manufacturing engineer." />
   <meta property="og:title" content="Resume — Gerardo Padilla Jr." /><meta property="og:description" content="Experience across manufacturing systems, data engineering, software, automation, machine learning, and biomedical engineering." /><meta property="og:type" content="website" />
-  <link rel="canonical" href="https://jerryp.vercel.app/resume.html" /><link rel="icon" href="favicon.svg" type="image/svg+xml" /><link rel="stylesheet" href="style.css" />
+  <link rel="canonical" href="https://jerryp.vercel.app/resume.html" /><link rel="icon" href="favicon.svg" type="image/svg+xml" /><link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="resume.css" />
 </head>
-<body>
+<body class="resume-page">
 
   <nav id="navbar">
     <a href="index.html" class="nav-logo" aria-label="Gerardo Padilla home">GP<span class="accent">.</span></a>
@@ -47,12 +47,16 @@
       <div class="container">
         <div class="resume-top reveal">
           <div>
-            <div class="section-label">Experience</div>
+            <div class="section-label">Professional Resume</div>
+            <h2 class="resume-name">Gerardo “Jerry” Padilla Jr.</h2>
+            <p class="resume-summary">Software, data, and manufacturing engineer working across production analytics, quality systems, scientific automation, machine learning, and biomedical instrumentation.</p>
+            <div class="resume-contact"><span>Mountain View, CA</span><a href="mailto:gerardo.padilla.work@gmail.com">gerardo.padilla.work@gmail.com</a><a href="https://github.com/Jerry-Padilla">GitHub: Jerry-Padilla</a><a href="https://linkedin.com/in/jerrypad">LinkedIn: jerrypad</a></div>
           </div>
           <button type="button" class="btn-ghost" id="printResume">Print / Save as PDF</button>
         </div>
 
-        <div class="timeline">
+        <h2 class="resume-section-title" id="experience">Work &amp; Research Experience</h2>
+        <div class="timeline" aria-labelledby="experience">
 
           <div class="timeline-item reveal">
             <div class="timeline-meta">
@@ -62,11 +66,17 @@
             <div class="timeline-content">
               <h3 class="experience-company">D-Tek Manufacturing</h3>
               <div class="experience-role">Manufacturing Engineer · Quality, Data &amp; Manufacturing Systems</div>
+              <p class="experience-context">High-precision CNC machining · Quality assurance and data integrity</p>
               <ul>
-                <li>Built Python automation and Power BI reporting for production, quality, and operational KPI analysis using ERP/MRP and MES data</li>
-                <li>Improved manufacturing traceability, inspection planning, controlled documentation, and data integrity across production workflows</li>
-                <li>Supported NPI/NPD readiness, process and equipment troubleshooting, root-cause investigations, corrective actions, and production optimization</li>
-                <li>Reduced quality misses by approximately 50% and improved on-time delivery by approximately 30%</li>
+                <li>Supported NPI/NPD and manufacturing readiness by preparing FAI/PPAP packages, inspection plans, specifications, and production-release documentation.</li>
+                <li>Reviewed engineering drawings, GD&amp;T, tolerances, and revisions to translate customer requirements into acceptance criteria and manufacturing controls; supported design-for-manufacturability reviews.</li>
+                <li>Managed NCR/MRB dispositions and supplier deviations, coordinating rework, scrap, holds, and approved use-as-is decisions for nonconforming products.</li>
+                <li>Applied SPC, control charts, and Cp/Cpk analysis to evaluate process stability and variation; led root-cause and CAPA investigations and verified corrective-action effectiveness through sampling and follow-up inspection.</li>
+                <li>Troubleshot CNC equipment and manufacturing systems, diagnosing mechanical, AC motor, electrical-component, and machine-control issues.</li>
+                <li>Verified incoming materials against certifications and customer specifications, resolved supplier discrepancies, and maintained material and inspection traceability for audit readiness.</li>
+                <li>Built Python ingestion, transformation, and validation workflows for ERP/MRP data and Power BI dashboards covering production, demand, inventory, costs, and operational KPIs.</li>
+                <li>Analyzed MES data to identify bottlenecks and recurring failures, investigated reporting discrepancies, and presented findings to support production and labor-allocation decisions.</li>
+                <li>Authored SOPs, work instructions, and inspection procedures; delivered training in English and Spanish and worked with machinists, inspectors, operators, and leadership on shop-floor improvements.</li>
               </ul>
               <div class="timeline-tags">
                 <span>Python</span><span>Power BI</span><span>MES</span><span>ERP/MRP</span><span>NPI/NPD</span><span>Root Cause Analysis</span>
@@ -82,15 +92,39 @@
             <div class="timeline-content">
               <h3 class="experience-company">Cellares</h3>
               <div class="experience-role">Data Engineering Intern · Software Analytics</div>
-              <p class="experience-context">Cell therapy manufacturing technology</p>
+              <p class="experience-context">Cell therapy manufacturing · Software analytics and data engineering</p>
               <ul>
-                <li>Collaborated with stakeholders to design, build, and validate production-level data tables and metrics for CAR T-cell manufacturing</li>
-                <li>Built and validated gold-layer tables within a Medallion Architecture, establishing reliable definitions for production and manufacturing metrics</li>
-                <li>Used Databricks and SQL to transform manufacturing data, then delivered real-time operational visibility through Grafana dashboards</li>
-                <li>Laid foundation for machine learning and telemetry reports</li>
+                <li>Designed and validated Gold-layer datasets and process metrics for CAR T-cell manufacturing within a Medallion Architecture.</li>
+                <li>Partnered with engineering, manufacturing, and scientific stakeholders to define data requirements and validate transformed datasets against expected process behavior.</li>
+                <li>Identified missing sensor telemetry channels and worked with upstream teams to close gaps in downstream manufacturing analysis.</li>
+                <li>Standardized SQL transformations, schemas, and metric definitions using Databricks to improve data quality and reporting consistency.</li>
+                <li>Developed interactive Grafana dashboards for near-real-time temperature monitoring, process trends, and statistical measurements.</li>
+                <li>Maintained traceability from source telemetry through transformations and dashboards, curating data for self-service analytics and future machine-learning workflows.</li>
               </ul>
               <div class="timeline-tags">
                 <span>SQL</span><span>Databricks</span><span>Grafana</span><span>Medallion Architecture</span><span>CAR T-cell</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="mono dim">Aug 2024 – May 2025</span>
+              <div class="company">San Jose, CA</div>
+            </div>
+            <div class="timeline-content">
+              <h3 class="experience-company">San Jose State University</h3>
+              <div class="experience-role">Software &amp; Instrumentation Engineer · Senior Design</div>
+              <p class="experience-context">Senior design · Wearable robotic exoskeleton research</p>
+              <ul>
+                <li>Developed a Python data-acquisition application integrating multichannel sensor collection with patient and experimental-trial management.</li>
+                <li>Standardized data collection across repeated gait-research trials, supporting live visualization, structured CSV logging, and offline signal analysis.</li>
+                <li>Implemented EMG processing using Butterworth filtering, full-wave rectification, and RMS envelope smoothing.</li>
+                <li>Evaluated sensor behavior, signal quality, and data integrity, and debugged instrumentation and data-collection workflows.</li>
+                <li>Collaborated across software, biomedical engineering, and biomechanics to support gait-disability research and presented findings at a biomedical research conference.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Python</span><span>Data Acquisition</span><span>EMG</span><span>Butterworth Filtering</span><span>Sensor Validation</span>
               </div>
             </div>
           </div>
@@ -101,35 +135,15 @@
               <div class="company">San Jose, CA</div>
             </div>
             <div class="timeline-content">
-              <h3 class="experience-company">San Jose State University</h3>
-              <div class="experience-role">Software &amp; Instrumentation Engineer · Senior Design</div>
-              <p class="experience-context">Wearable robotic exoskeleton research</p>
-              <ul>
-                <li>Developed Python instrumentation and data-acquisition workflows for a wearable robotic exoskeleton, including patient and trial management</li>
-                <li>Collected and validated 20+ channels of actuator, joint-state, inertial, and experimental sensor data for research testing</li>
-                <li>Implemented EMG processing with Butterworth filtering, full-wave rectification, and RMS envelope smoothing</li>
-                <li>Supported live visualization, structured CSV logging, offline signal analysis, and repeatable experimental setup</li>
-              </ul>
-              <div class="timeline-tags">
-                <span>Python</span><span>Data Acquisition</span><span>EMG</span><span>Butterworth Filtering</span><span>Sensor Validation</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-meta">
-              <span class="mono dim">Sep 2024 — May 2025</span>
-              <div class="company">San Jose, CA</div>
-            </div>
-            <div class="timeline-content">
               <h3 class="experience-company">Jabil</h3>
               <div class="experience-role">Software Engineering Intern · Jabil Scholars Program</div>
-              <p class="experience-context">Automated optical inspection for PCBA manufacturing</p>
+              <p class="experience-context">Jabil Scholars Program · Machine learning for electronics inspection</p>
               <ul>
-                <li>Led student engineer team to develop ML-based support for PCBA Automated Optical Inspection</li>
-                <li>Trained and evaluated Ultralytics YOLO classification and detection models for PCBA polarity defects, tracking precision, recall, and confidence-threshold behavior</li>
-                <li>Reduced manual AOI verification time by up to 90% while documenting failure modes, experimental results, and repeatable operating procedures</li>
-                <li>Planned controlled experiments, coordinated team deliverables, and presented findings at Jabil's Industry Showcase</li>
+                <li>Led a student engineering team developing machine-learning-assisted automated optical inspection for PCBA polarity defects.</li>
+                <li>Trained and evaluated Ultralytics YOLO classification and object-detection models, integrating inspection imagery, defect labels, predictions, and manual review.</li>
+                <li>Designed DOE-based evaluations of inspection methods and model configurations; analyzed precision, recall, false positives, false negatives, and confidence thresholds.</li>
+                <li>Applied failure-mode analysis to inspection outcomes to identify weaknesses and select practical operating points for the proof-of-concept workflow.</li>
+                <li>Developed repeatable SOPs and testing methods, coordinated technical tasks with Jabil mentors, and presented findings at an industry showcase.</li>
               </ul>
               <div class="timeline-tags">
                 <span>Python</span><span>YOLO</span><span>Computer Vision</span><span>ML</span><span>PCBA</span>
@@ -139,16 +153,19 @@
 
           <div class="timeline-item reveal">
             <div class="timeline-meta">
-              <span class="mono dim">May 2024 — Aug 2024</span>
+              <span class="mono dim">May 2024 – Aug 2024</span>
               <div class="company">South San Francisco, CA</div>
             </div>
             <div class="timeline-content">
               <h3 class="experience-company">AbbVie</h3>
               <div class="experience-role">Software Engineering Intern · Business Technology Solutions</div>
+              <p class="experience-context">Business Technology Solutions · Scientific automation, testing, and validation</p>
               <ul>
-                <li>Automated and optimized a research-data processing pipeline handling 15 GB+ datasets and millions of measurement points</li>
-                <li>Introduced multithreaded processing and workflow improvements that reduced supported processing time by approximately 99%</li>
-                <li>Collaborated with scientists to expand usability and built testing and verification safeguards for data integrity and performance</li>
+                <li>Developed a Python application to automate scientific data processing and replace repetitive Excel-based and manual manipulation.</li>
+                <li>Implemented multithreading and reusable processing logic to improve application performance, maintainability, and scalability.</li>
+                <li>Built automated tests and verification routines to validate processing accuracy, data integrity, reliability, and performance.</li>
+                <li>Added timing instrumentation, logging, diagnostics, and validation checkpoints to support troubleshooting and observability.</li>
+                <li>Gathered requirements directly from scientists and expanded application functionality iteratively around research workflows and feedback.</li>
               </ul>
               <div class="timeline-tags">
                 <span>Python</span><span>Multithreading</span><span>Data Engineering</span><span>Testing</span>
@@ -158,32 +175,40 @@
 
           <div class="timeline-item reveal">
             <div class="timeline-meta">
-              <span class="mono dim">Jun 2022 — Aug 2022</span>
+              <span class="mono dim">Jun 2022 – Aug 2022</span>
               <div class="company">South San Francisco, CA</div>
             </div>
             <div class="timeline-content">
               <h3 class="experience-company">iSono Health</h3>
-              <div class="experience-role">Software Engineering Intern</div>
+              <div class="experience-role">QA / Software Engineering Intern · Medical Equipment Testing</div>
+              <p class="experience-context">Medical ultrasonic imaging · Equipment interfaces and software QA</p>
               <ul>
-                <li>Contributed to software development and testing for medical technology in collaboration with the engineering team</li>
+                <li>Built and tested user-interface components for medical scanning equipment using JavaScript, TypeScript, and Playwright.</li>
+                <li>Implemented interface behavior from product and design specifications and intended medical-device workflows.</li>
+                <li>Developed and executed test cases to verify equipment-interface behavior against functional and design requirements.</li>
+                <li>Collaborated with engineers and mentors to troubleshoot implementation issues and validate software connected to physical medical equipment.</li>
+                <li>Annotated medical imagery for supervised machine-learning workflows supporting breast-tumor detection and classification.</li>
               </ul>
               <div class="timeline-tags">
-                <span>Software Engineering</span><span>Testing</span><span>Medical Technology</span>
+                <span>JavaScript</span><span>TypeScript</span><span>Playwright</span><span>Medical Imaging</span>
               </div>
             </div>
           </div>
 
           <div class="timeline-item reveal">
             <div class="timeline-meta">
-              <span class="mono dim">Jan 2022 — Mar 2022</span>
+              <span class="mono dim">Jan 2022 – Mar 2022</span>
               <div class="company">Palo Alto, CA</div>
             </div>
             <div class="timeline-content">
               <h3 class="experience-company">Stanford University</h3>
               <div class="experience-role">Software Engineering Intern · Self-Driving Vehicles Program</div>
+              <p class="experience-context">Self-Driving Vehicles Program · Radar sensing and state estimation</p>
               <ul>
-                <li>Created an application to simulate radar data and determine accurate distances for moving objects in adverse conditions</li>
-                <li>Recreated a Kalman filtering algorithm to optimize radar readings and generate a visual output</li>
+                <li>Developed a radar simulation application for tracking moving objects and evaluating distance-measurement accuracy in autonomous-vehicle research.</li>
+                <li>Simulated sensing behavior under adverse environmental conditions and evaluated the effects of measurement noise on tracking accuracy.</li>
+                <li>Recreated a Kalman filtering algorithm to process noisy radar measurements and improve position estimates.</li>
+                <li>Generated visual tracking outputs comparing sensor measurements and filtered state estimates to characterize sensing and algorithm behavior.</li>
               </ul>
               <div class="timeline-tags">
                 <span>Python</span><span>Kalman Filter</span><span>Radar Simulation</span><span>Signal Processing</span>
@@ -193,15 +218,33 @@
 
         </div>
 
+        <section class="resume-skills" aria-labelledby="skills">
+          <h2 class="resume-section-title" id="skills">Skills &amp; Technologies</h2>
+          <div class="resume-skills-grid">
+            <div class="resume-skill-group"><h3>Programming</h3><ul><li>Python</li><li>SQL</li><li>R</li><li>MATLAB</li><li>Java</li><li>JavaScript</li><li>TypeScript</li><li>C++</li><li>HTML</li></ul></div>
+            <div class="resume-skill-group"><h3>Data Engineering</h3><ul><li>ETL/ELT</li><li>Data Ingestion</li><li>Data Transformation</li><li>Data Validation</li><li>Data Modeling</li><li>Schema Validation</li><li>Batch Processing</li><li>Event Streaming</li><li>Data Quality</li><li>Manufacturing Telemetry</li><li>Sensor Data</li><li>Medallion Architecture</li><li>Apache Kafka</li><li>Kafka KRaft</li><li>Apache Spark</li></ul></div>
+            <div class="resume-skill-group"><h3>Data &amp; Analytics</h3><ul><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Matplotlib</li><li>Databricks</li><li>Grafana</li><li>Power BI</li><li>ERP/MRP</li><li>MES</li><li>Excel</li><li>PostgreSQL</li><li>SQLite</li></ul></div>
+            <div class="resume-skill-group"><h3>Machine Learning</h3><ul><li>Classification</li><li>Object Detection</li><li>Computer Vision</li><li>Feature Engineering</li><li>Model Evaluation</li><li>Precision / Recall</li><li>Confidence Thresholds</li><li>Automated Visual Inspection</li><li>Ultralytics / YOLO</li></ul></div>
+            <div class="resume-skill-group"><h3>Web &amp; Software Engineering</h3><ul><li>React</li><li>Next.js</li><li>Three.js</li><li>React Three Fiber</li><li>Zustand</li><li>Vue.js</li><li>Git</li><li>pytest</li><li>Playwright</li><li>Vitest</li><li>Automated Testing</li><li>Debugging</li><li>Structured Logging</li><li>Multithreading</li><li>Systems Integration</li><li>Workflow Automation</li><li>Jira</li><li>Agile/Scrum</li></ul></div>
+            <div class="resume-skill-group"><h3>Infrastructure &amp; Deployment</h3><ul><li>Docker</li><li>CI</li><li>Vercel</li></ul></div>
+            <div class="resume-skill-group"><h3>Manufacturing &amp; NPI</h3><ul><li>NPI / NPD</li><li>Manufacturing Readiness</li><li>Process Validation</li><li>DFM</li><li>GD&amp;T</li><li>Drawing Review</li><li>Inspection Planning</li><li>FAI</li><li>PPAP</li><li>AQL</li><li>Manufacturing Traceability</li><li>Controlled Documentation</li></ul></div>
+            <div class="resume-skill-group"><h3>Quality Engineering</h3><ul><li>CAPA</li><li>NCR</li><li>MRB</li><li>Supplier Deviations</li><li>Root Cause Analysis</li><li>Corrective Actions</li><li>SPC</li><li>Control Charts</li><li>Cp/Cpk</li><li>Process Capability</li><li>Sampling Inspection</li><li>Trend Analysis</li><li>Audit Support</li><li>DOE</li></ul></div>
+            <div class="resume-skill-group"><h3>Equipment &amp; Automation</h3><ul><li>CNC Equipment</li><li>CNC Lathes</li><li>AC Motors</li><li>Electrical Components</li><li>PCB / Control-Board Troubleshooting</li><li>Mechanical Systems</li><li>Automated Inspection Equipment</li><li>Electromechanical Troubleshooting</li></ul></div>
+            <div class="resume-skill-group"><h3>Mechanical &amp; Instrumentation</h3><ul><li>SOLIDWORKS</li><li>CSWP</li><li>CAD</li><li>FEA</li><li>3D Printing</li><li>Sensor Data Acquisition</li><li>EMG Processing</li><li>Radar Sensing</li><li>Signal Processing</li><li>Kalman Filtering</li><li>Butterworth Filtering</li><li>RMS Envelope Smoothing</li><li>COMSOL</li></ul></div>
+            <div class="resume-skill-group"><h3>Collaboration &amp; Operations</h3><ul><li>Technical Documentation</li><li>Team Leadership</li><li>Stakeholder Collaboration</li><li>Bilingual Training</li><li>Customer Service</li><li>Conflict Resolution</li><li>De-escalation</li><li>Procedural Compliance</li></ul></div>
+            <div class="resume-skill-group"><h3>Languages</h3><ul><li>English — Fluent</li><li>Spanish — Fluent</li></ul></div>
+          </div>
+        </section>
+
         <!-- Education -->
         <div class="section" style="padding-bottom:0;">
-          <div class="section-label reveal">Education</div>
+          <h2 class="resume-section-title">Education &amp; Certification</h2>
           <div class="edu-grid">
             <div class="edu-card reveal">
               <div class="school">San Jose State University</div>
               <h3>B.S. Biomedical Engineering · Minor in Computer Science</h3>
               <div class="year">May 2025 · San Jose, CA</div>
-              <p class="courses">Applied Machine Learning, Biosensors & Bioinstrumentation, Biomedical Regulatory Requirements, Engineering Biomechanics, Biomedical Product Realization, Advanced Data Structures & Algorithms</p>
+              <p class="courses">Applied Machine Learning, Biosensors &amp; Bioinstrumentation, Biomedical Regulatory Requirements, Engineering Biomechanics, Biomedical Product Realization, Advanced Data Structures &amp; Algorithms</p>
             </div>
             <div class="edu-card reveal">
               <div class="school">Foothill – De Anza College</div>
