@@ -391,7 +391,7 @@ footer {
 .latest-stack span { font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-bright); border: 1px solid rgba(226, 207, 166, 0.2); background: rgba(226, 207, 166, 0.05); padding: 0.25rem 0.5rem; border-radius: 999px; }
 .latest-link { margin-top: 1.25rem; color: var(--accent-bright); font-family: var(--font-mono); font-size: 0.7rem; position: relative; z-index: 1; }
 
-/* Live FactoryOS homepage window */
+/* Live CutCycle DataWorks homepage window */
 .factory-demo {
   padding: 6rem 0;
   background: var(--surface);
