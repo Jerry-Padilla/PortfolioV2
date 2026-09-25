@@ -620,6 +620,52 @@ footer {
 .gallery-caption { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text); letter-spacing: 0.05em; }
 
 /* ============================================================
+   AVIATION / INTERESTS PAGE
+   ============================================================ */
+.aviation-hero {
+  min-height: min(760px, calc(100vh - var(--nav-h)));
+  display: grid; align-items: end; position: relative; overflow: hidden;
+  background: #171715;
+}
+.aviation-hero-media, .aviation-hero-shade { position: absolute; inset: 0; }
+.aviation-hero-media video { width: 100%; height: 100%; object-fit: cover; opacity: 0.72; }
+.aviation-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(8,8,7,0.88) 0%, rgba(8,8,7,0.5) 58%, rgba(8,8,7,0.22) 100%),
+    linear-gradient(0deg, rgba(8,8,7,0.82) 0%, transparent 55%);
+}
+.aviation-hero-content { position: relative; z-index: 2; padding-top: 8rem; padding-bottom: 5rem; color: #fff; }
+.aviation-hero .page-label { color: rgba(255,255,255,0.7); }
+.aviation-intro { max-width: 650px; color: rgba(255,255,255,0.8); font-size: 1.05rem; margin: 1.5rem 0 2rem; }
+.aviation-jump { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.aviation-jump svg { width: 17px; height: 17px; }
+.aviation-statement { border-bottom: 1px solid var(--border); }
+.aviation-statement-grid { display: grid; grid-template-columns: minmax(180px, 0.35fr) 1fr; gap: 4rem; align-items: start; }
+.aviation-lede { max-width: 760px; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4vw, 3.2rem); line-height: 1.12; letter-spacing: -0.025em; }
+.flight-feature { background: var(--bg-2); }
+.flight-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 3rem; margin-bottom: 2rem; }
+.flight-section-heading .section-label, .flight-section-heading .section-title { margin-bottom: 0.55rem; }
+.flight-section-heading > p { max-width: 430px; color: var(--text-muted); }
+.flight-media-feature, .flight-media-card { background: #111; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.flight-media-feature video { width: 100%; max-height: 680px; aspect-ratio: 16 / 9; display: block; object-fit: cover; background: #111; }
+.flight-caption, .flight-media-card figcaption { display: flex; justify-content: space-between; gap: 1rem; padding: 0.85rem 1rem; color: rgba(255,255,255,0.82); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.05em; }
+.flight-caption span:last-child, .flight-media-card figcaption span:last-child { color: rgba(255,255,255,0.52); }
+.flight-media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem; }
+.flight-media-card video { width: 100%; aspect-ratio: 16 / 10; display: block; object-fit: cover; background: #111; }
+.route-index { border-bottom: 1px solid var(--border); }
+.route-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--border); }
+.route-card { display: grid; grid-template-columns: auto 1fr auto; gap: 1.25rem; min-height: 190px; padding: 2rem; border-bottom: 1px solid var(--border); }
+.route-card:nth-child(odd) { border-right: 1px solid var(--border); }
+.route-number { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); }
+.route-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.route-card p { color: var(--text-muted); max-width: 330px; }
+.route-card > svg { width: 22px; height: 22px; color: var(--text-dim); }
+.aviation-close-inner { display: flex; justify-content: space-between; align-items: end; gap: 3rem; }
+.aviation-close h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; margin-bottom: 0.75rem; }
+.aviation-close p { color: var(--text-muted); max-width: 620px; }
+.aviation-close-links { display: flex; gap: 0.75rem; flex-shrink: 0; }
+
+/* ============================================================
    TOOLS PAGE
    ============================================================ */
 .tools-body { padding: 5rem 0; }
@@ -652,6 +698,8 @@ footer {
   .latest-grid { grid-template-columns: 1fr 1fr; }
   .latest-card:last-child { grid-column: 1 / -1; min-height: 280px; }
   .factory-demo-heading { align-items: flex-start; flex-direction: column; }
+  .flight-section-heading { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .aviation-close-inner { align-items: flex-start; flex-direction: column; }
 }
 @media (max-width: 640px) {
   nav { padding: 0 1.5rem; }
@@ -678,6 +726,14 @@ footer {
   .factory-demo-window iframe { height: 72vh; min-height: 520px; }
   .email-dialog { padding: 2rem 1.25rem 1.25rem; }
   .email-options { grid-template-columns: 1fr; }
+  .aviation-hero { min-height: 680px; }
+  .aviation-hero-content { padding-top: 7rem; padding-bottom: 3.5rem; }
+  .aviation-statement-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .flight-media-grid, .route-grid { grid-template-columns: 1fr; }
+  .route-card:nth-child(odd) { border-right: 0; }
+  .flight-media-feature, .flight-media-card { margin-inline: -1.5rem; border-radius: 0; border-left: 0; border-right: 0; }
+  .aviation-close-links { width: 100%; flex-direction: column; }
+  .aviation-close-links a { justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
