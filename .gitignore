@@ -1,2 +1,5 @@
 # macOS metadata sidecars copied with flight media
 **/._*
+
+# Local-only image conversion dependencies
+.tmp-pillow-heif/

@@ -62,6 +62,7 @@ test('aviation collection presents optimized flight photos as a lazy-loaded loca
   for (const location of ['Monterey', 'San Jose', 'Alameda', 'Merced', 'Oakdale']) {
     assert.match(html, new RegExp(`data-location="${location}"`), `${location} should have a gallery group`);
   }
+  assert.match(html, /USS Hornet Museum/);
 
   for (const [, source] of photos) {
     const tag = photos.find((match) => match[1] === source)[0];
