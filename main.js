@@ -173,6 +173,29 @@ document.addEventListener('DOMContentLoaded', () => {
     printResume.addEventListener('click', () => window.print());
   }
 
+  /* ── Flight Photo Viewer ── */
+  const flightPhotoDialog = document.getElementById('flightPhotoDialog');
+  if (flightPhotoDialog) {
+    const dialogImage = flightPhotoDialog.querySelector('img');
+    const dialogCaption = flightPhotoDialog.querySelector('p');
+    const closeButton = flightPhotoDialog.querySelector('.flight-photo-dialog-close');
+
+    document.querySelectorAll('.flight-photo').forEach(photo => {
+      photo.addEventListener('click', () => {
+        const thumbnail = photo.querySelector('img');
+        dialogImage.src = photo.dataset.full || thumbnail.src;
+        dialogImage.alt = thumbnail.alt;
+        dialogCaption.textContent = photo.dataset.caption || thumbnail.alt;
+        flightPhotoDialog.showModal();
+      });
+    });
+
+    closeButton.addEventListener('click', () => flightPhotoDialog.close());
+    flightPhotoDialog.addEventListener('click', event => {
+      if (event.target === flightPhotoDialog) flightPhotoDialog.close();
+    });
+  }
+
   /* ── Hero Parallax ── */
   const glow = document.querySelector('.hero-glow');
   if (glow) {

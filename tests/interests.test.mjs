@@ -57,6 +57,8 @@ test('aviation collection presents optimized flight photos as a lazy-loaded loca
 
   assert.ok(photos.length >= 12, 'expected a curated gallery of at least twelve WebP photos');
   assert.match(html, /class="flight-photo-gallery"/);
+  assert.match(html, /<dialog[^>]*id="flightPhotoDialog"/);
+  assert.match(html, /class="[^"]*\bflight-photo\b[^"]*"[^>]*data-full=/);
   for (const location of ['Monterey', 'San Jose', 'Alameda', 'Merced', 'Oakdale']) {
     assert.match(html, new RegExp(`data-location="${location}"`), `${location} should have a gallery group`);
   }

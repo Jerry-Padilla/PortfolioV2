@@ -33,6 +33,9 @@ def main() -> None:
         for filename in filenames:
             source = SOURCE / location / filename
             destination = OUTPUT / output_name(location, filename)
+            if destination.exists():
+                print(f"kept {destination.relative_to(ROOT)}")
+                continue
             with Image.open(source) as image:
                 image = ImageOps.exif_transpose(image).convert("RGB")
                 image.thumbnail((MAX_EDGE, MAX_EDGE), Image.Resampling.LANCZOS)
