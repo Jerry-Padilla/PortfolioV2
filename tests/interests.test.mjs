@@ -59,10 +59,11 @@ test('aviation collection presents optimized flight photos as a lazy-loaded loca
   assert.match(html, /class="flight-photo-gallery"/);
   assert.match(html, /<dialog[^>]*id="flightPhotoDialog"/);
   assert.match(html, /class="[^"]*\bflight-photo\b[^"]*"[^>]*data-full=/);
-  for (const location of ['Monterey', 'San Jose', 'Alameda', 'Merced', 'Oakdale']) {
+  for (const location of ['Monterey', 'San Jose', 'Alameda', 'Merced']) {
     assert.match(html, new RegExp(`data-location="${location}"`), `${location} should have a gallery group`);
   }
   assert.match(html, /USS Hornet Museum/);
+  assert.doesNotMatch(html, /oakdale-img_7742\.webp/, 'aircraft-for-sale poster should not appear in the gallery');
 
   for (const [, source] of photos) {
     const tag = photos.find((match) => match[1] === source)[0];
